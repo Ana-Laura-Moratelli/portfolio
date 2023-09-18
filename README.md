@@ -17,3 +17,5 @@ Esse é meu portfólio onde apresenta as informações dos meus projetos e dos q
 Digite esse comando no prompt de comando do seu computador:
 
         git clone https://github.com/Ana-Laura-Moratelli/portfolio_digital_dsm.git
+
+(Validação professor FGMC - 1DSM - 2023-02)
