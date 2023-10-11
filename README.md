@@ -55,6 +55,11 @@ Esse é meu portfólio onde apresenta as informações dos meus projetos e dos q
   <h3>Passo 8: Encerrando o Ambiente Virtual</h3>
   <pre><code>deactivate</code></pre>
 
+  <h2>:open_file_folder: Pastas do repositório</h2>
+  
+   <p>mgt: Apresenta o wireframe mobile do portfólio</p>
+   <p>src: Apresenta os códigos fontes para execução do portfólio</p>
+
 
 
 
