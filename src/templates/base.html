@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/style.css">
+    
+</head>
+{% block head %}
+<!-- TÍTULO PÁGINA -->
+{% endblock %}
+<body>
+    <header>
+        
+        <nav class="navbar">
+            <a href="/" class="logo"><img class="logo" src="../static/img/logo.svg" alt="logo"></a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="/sobremim" class="nav-link">Sobre mim</a></li>
+                <li class="nav-item"><a href="/projetos" class="nav-link">Projetos</a></li>
+                <li class="nav-item"><a href="/contatos" class="nav-link">Contatos</a></li>
+            </ul>
+            <div class="hamburguer">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+    <script src="../static/js/script.js"></script>
+    
+    {% block body %}
+    <!-- CONTEUDO AQUI -->
+    {% endblock %}
