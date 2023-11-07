@@ -4,28 +4,45 @@
 {% endblock %}
 {% block body %}
     <h1 class="titulo-pag">Projetos</h1>
-    <section class="text">
-    <p>Esses são os projetos acadêmicos que eu ja realizei durante o primeiro semestre da faculdade de desenvolvimento de software multiplataforma, para acessar os seus repositórios, e dos meus futuros projetos 
-    <a class="link-git" href="https://github.com/Ana-Laura-Moratelli">clique aqui!<a></p>
-    
+    <section class="text-projetos">
+        <p>
+            Esses são os projetos acadêmicos que eu ja realizei durante o primeiro semestre da faculdade de desenvolvimento de software multiplataforma 
+        </p>
     </section>
    
     <section class="container-projetos">
-        <section class="projeto">
-            <h2>Nefrologia Pediátrica - API</h2>
-            
-            <img class="image" src="../static/img/img_api.png" alt="api">
-            </section>
-            <section class="projeto">
-                <h2>Universidade Unes</h2>
-                
-                <img class="image" src="../static/img/img_unes.png" alt="unes">
-            </section>
-            <section class="projeto">
-                <h2>Portfólio</h2>
-                
-                <img class="image" src="../static/img/portfolio.png" alt="portfolio">
-            </section>
+        <div class="card-projetos">
+            <div class="caixaImg">
+                <img src="../static/img/img_api.png" alt="API">
+            </div>
+            <div class="conteudo-projetos">
+                <h3>Nefrologia Pediátrica</h3>
+                <p>Site desenvolvido para auxiliar mães com filhos que sofrem de doença renal crônica e notícias importantes sobre Nefrologia Pediátrica.</p>
+                <a href="https://github.com/Sync-FATEC/API-NEFRO">Acesse o repositório</a>
+            </div>
+        </div>
+        <div class="card-projetos">
+            <div class="caixaImg">
+                <img src="../static/img/img_site_unes.png" alt="site unes">
+            </div>
+            <div class="conteudo-projetos">
+                <h3>Universidade Unes</h3>
+                <p>
+                O site simula informações acadêmicas,desenvolvido para praticar para minhas habilidades de desenvolvimento web.</p>
+                    <a href="https://github.com/Ana-Laura-Moratelli/site-unes">Acesse o repositório</a>
+            </div>
+        </div>
+        <div class="card-projetos">
+            <div class="caixaImg">
+                <img class="imagem-projeto" src="../static/img/img_portfolio.png" alt="portfolio">
+            </div>
+            <div class="conteudo-projetos">
+                <h3>Portfólio</h3>
+                <p>Meu portfólio que foi desenvolvido com o objetivo de ter as minhas informações pessoais, acadêmicas e meus contatos.
+                </p>
+                <a href="https://github.com/Ana-Laura-Moratelli">Acesse o repositório</a>
+            </div>
+        </div>
     </section>
 </body>
 </html>
