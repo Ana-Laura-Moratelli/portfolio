@@ -33,8 +33,8 @@ Esse é meu portfólio onde apresenta as informações dos meus projetos e dos q
   <h3>Passo 3: Clone o Repositório</h3>
   <pre><code>git clone https://github.com/Ana-Laura-Moratelli/portfolio_digital_dsm</code></pre>
 
-  <h3>Passo 4: Entre na Pasta src</h3>
-  <pre><code>cd portfolio_digital_dsm/src</code></pre>
+  <h3>Passo 4: Entre na Pasta app</h3>
+  <pre><code>cd portfolio_digital_dsm/app</code></pre>
 
   <h3>Passo 5: Crie o Ambiente Virtual</h3>
   <pre><code>python -m venv venv</code></pre>
@@ -47,7 +47,7 @@ Esse é meu portfólio onde apresenta as informações dos meus projetos e dos q
   <pre><code>pip install -r requirements.txt</code></pre>
 
   <h3>Passo 6: Execute a Aplicação</h3>
-  <pre><code>flask run</code></pre>
+  <pre><code>python app.py</code></pre>
 
   <h3>Passo 7: Abra o Link no Navegador</h3>
   <p>Abrir o seguinte link em seu navegador de preferência: <a href="http://127.0.0.1:5000">http://127.0.0.1:5000</a></p>
@@ -57,8 +57,14 @@ Esse é meu portfólio onde apresenta as informações dos meus projetos e dos q
 
   <h2>:open_file_folder: Pastas do repositório</h2>
   
+   <p>app: Apresenta os códigos fontes para execução do portfólio</p>
    <p>mgt: Apresenta o wireframe mobile do portfólio</p>
-   <p>src: Apresenta os códigos fontes para execução do portfólio</p>
+   <p>static: Apresenta os códigos fontes estáticos</p>
+   <p>css: Apresenta os códigos CSS</p
+   <p>img: Apresenta as imagens</p>
+   <p>js: Apresenta os códigos java script</p>
+   <p>templates: Apresenta os códigos HTML</p>
+   
 
 
 
