@@ -4,51 +4,134 @@
 {% endblock %}
 {% block body %}
     <h1 class="titulo-pag">Formação acadêmica</h1>
+    <div class="container-card"> 
+        <div class="card">
+          <div class="card1">
+            <p class="card-title">
+              <span class="material-symbols-outlined">school</span>  
+              Ensino médio e técnico em eletrônica
+            </p>
+            <p class="card-text">
+              Concluído em 2022
+              <br>
+              Instituição: Colégios Univap
+            </p> 
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card1">
+            <p class="card-title"> <span class="material-symbols-outlined">
+              school
+              </span>  Desenvolvimento de software multiplataforma
+            </p><p class="card-text">
+              Conclusão prevista em agosto de 2026
+              <br>
+              Instituição: Fatec Prof. Jessen Vidal
+            </p>
+         
+            
+          </div>
+        </div>
+        <div class="card">
+          <div class="card1">
+            <p class="card-title"> <span class="material-symbols-outlined">
+              school
+              </span>  Curso de Inglês Intermediário
+            </p><p class="card-text">
+              Concluído em 2021
+              <br>
+              Instituição: ELEC School
+            </p>
+         
+            
+          </div>
+        </div>
+        </div>
+    <h2>Medalhas</h2>
     <section class="container-sobre">
         <section class="sobre">
-            <h2>Inglês</h2>
-            <p>
-            Concluído em 2021 <br>
-            Instituição: ELEC <br>
-            Nível: Intermediário</p>
-            </section>
-            <section class="sobre">
-            <h2>Ensino médio e técnico em eletrônica </h2>
-            <p>
-            Concluído em 2022 <br>
-            Instituição:  Colégio Antônio Teixeira Fernandes<br>
-            </p>
-            </section>
-            <section class="sobre">
-            <h2> Ensino superior em Desenvolvimento de Software Multiplataforma </h2>
-            <p>
-            Conclusão prevista: 06/2026<br>
-            Instituição: Fatec - Prof Jessen Vidal<br>
-            </p>
-            </section>
-    </section>
-    <h1>Medalhas</h1>
-    <section class="container-sobre">
-        <section class="sobre1">
+           
+                <div class="card-medalha">
+                    <span class="icone-medalha">
+                        <i class="fa-solid fa-medal"></i>
+                      
+                    </span>
             <p>2º lugar Olimípiada Brasileira de Astronomia em 2022</p>
             </section>
-            <section class="sobre1">
-                <p>2º lugar Olimpíada Canguru de matemática em 2018</p>
+            <section class="sobre">
+           
+                <div class="card-medalha">
+                    <span class="icone-medalha">
+                        <i class="fa-solid fa-medal"></i>
+                      
+                    </span>
+            <p>2º lugar Olimpíada Canguru de matemática em 2018</p>
             </section>
+           
     </section>
-    <h1>Conhecimentos</h1>
-    <section class="container-sobre">
-        <section class="sobre1">
-            <p>Atualmente, estou aprendendo a utilizar algumas tecnologias, tais como: HMTL 5, CSS 3, LINUX, PYTHON e MySQL</p>
-            <div class="image">
-                <img src="../static/img/html.png" alt="html">
-                <img src="../static/img/css.png" alt="css">
-                <img src="../static/img/linux.png" alt="linux">
-                <img src="../static/img/python.png" alt="python">
-                <img src="../static/img/mysql.png" alt="mysql">
-            </div>
-            </section>
-            </section>
+    <h2>Conhecimentos</h2>
+    
+            <section class="container-sobre1">
+                <div class="card-sobre">
+                <span class="icone">
+                    <i class="fa-solid fa-code"></i>
+                </span>
+                <p class="texto-card">
+                    <h3>Front-end</h3>
+                    <ul>
+                        <li>HTML 5</li>
+                        <li>CSS 3</li>
+                        <li>Java Script</li>
+                    </ul>
+                    <h3>Frameworks</h3>
+                    <ul>
+                        <li>Bootstrap</li>
+                    </ul>    
+                </p>
+                </div>
+
+                <div class="card-sobre">
+                    <span class="icone">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    
+                    </span>
+                    
+                    <p class="texto-card">
+                        <h3>Back-end</h3>
+                        <ul>
+                            <li>Python</li>
+                        </ul>
+                        <h3>Frameworks</h3>
+                        <ul>
+                            <li>Flask</li>
+                        </ul> 
+                        <h3>Database</h3>
+                    <ul>
+                        <li>MySQL</li>
+                    </ul>
+                    </p>
+                </div>
+                
+                <div class="card-sobre">
+                    <span class="icone">
+                        <i class="fa-brands fa-dev"></i>  </span>
+                    
+                    <p class="texto-card">
+                    <h3>DevOps</h3>
+                    <ul>
+                        <li>Linux</li>
+                    </ul>
+                    <h3>Cloud</h3>
+                    <ul>
+                        <li>AWS</li>
+                    </ul>
+                    <h3>Virtualização</h3>
+                    <p>Docker</p>
+                    </p>
+                </div>
+
+                </section>
 </body>
 </html>
 {% endblock %}
