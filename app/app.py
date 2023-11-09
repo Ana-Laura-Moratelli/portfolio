@@ -13,7 +13,10 @@ def sobremim():
 
 @app.route('/projetos')
 def projetos():
-    return render_template('projetos.html')
+    projetos = [
+        ('Portfólio', 'Meu portfólio que foi desenvolvido com o objetivo de ter as minhas informações pessoais, acadêmicas e meus contatos.','Acesse o repositório'),
+    ]
+    return render_template('projetos.html',  projetos=projetos)
 
 @app.route('/contatos')
 def contatos():

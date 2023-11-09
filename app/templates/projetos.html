@@ -18,7 +18,7 @@
             <div class="conteudo-projetos">
                 <h3>Nefrologia Pediátrica</h3>
                 <p>Site desenvolvido para auxiliar mães com filhos que sofrem de doença renal crônica e notícias importantes sobre Nefrologia Pediátrica.</p>
-                <a href="https://github.com/Sync-FATEC/API-NEFRO">Acesse o repositório</a>
+                <a href="https://github.com/Sync-FATEC/API-NEFRO" target="_blank">Acesse o repositório</a>
             </div>
         </div>
         <div class="card-projetos">
@@ -29,7 +29,7 @@
                 <h3>Universidade Unes</h3>
                 <p>
                 O site simula informações acadêmicas,desenvolvido para praticar para minhas habilidades de desenvolvimento web.</p>
-                    <a href="https://github.com/Ana-Laura-Moratelli/site-unes">Acesse o repositório</a>
+                    <a href="https://github.com/Ana-Laura-Moratelli/site-unes" target="_blank">Acesse o repositório</a>
             </div>
         </div>
         <div class="card-projetos">
@@ -37,10 +37,12 @@
                 <img class="imagem-projeto" src="../static/img/img_port.png" alt="portfolio">
             </div>
             <div class="conteudo-projetos">
-                <h3>Portfólio</h3>
-                <p>Meu portfólio que foi desenvolvido com o objetivo de ter as minhas informações pessoais, acadêmicas e meus contatos.
-                </p>
-                <a href="https://github.com/Ana-Laura-Moratelli">Acesse o repositório</a>
+                {% for projeto in projetos  %}
+                <h3>{{ projeto[0] }}</h3>
+                <p>{{ projeto[1] }}</p>
+                <a href="https://github.com/Ana-Laura-Moratelli" target="_blank">{{ projeto[2] }}</a>
+                {% endfor %}
+                
             </div>
         </div>
     </section>
