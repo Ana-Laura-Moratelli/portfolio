@@ -11,41 +11,17 @@
     </section>
    
     <section class="container-projetos">
+        {% for projeto in projetos %}
         <div class="card-projetos">
             <div class="caixaImg">
-                <img src="../static/img/img_api.png" alt="API">
+                <img src="{{ projeto['img']}}" alt="">
             </div>
             <div class="conteudo-projetos">
-                <h3>Nefrologia Pediátrica</h3>
-                <p>Site desenvolvido para auxiliar mães com filhos que sofrem de doença renal crônica e notícias importantes sobre Nefrologia Pediátrica.</p>
-                <a href="https://github.com/Sync-FATEC/API-NEFRO" target="_blank">Acesse o repositório</a>
+                <h3>{{ projeto['titulo'] }}</h3>
+                <p>{{ projeto['texto'] }}</p>
+                <a href="{{ projeto['link'] }}" target="_blank">{{ projeto['acesse'] }}</a>
             </div>
         </div>
-        <div class="card-projetos">
-            <div class="caixaImg">
-                <img src="../static/img/img_site_unes.png" alt="site unes">
-            </div>
-            <div class="conteudo-projetos">
-                <h3>Universidade Unes</h3>
-                <p>
-                O site simula informações acadêmicas,desenvolvido para praticar para minhas habilidades de desenvolvimento web.</p>
-                    <a href="https://github.com/Ana-Laura-Moratelli/site-unes" target="_blank">Acesse o repositório</a>
-            </div>
-        </div>
-        <div class="card-projetos">
-            <div class="caixaImg">
-                <img class="imagem-projeto" src="../static/img/img_port.png" alt="portfolio">
-            </div>
-            <div class="conteudo-projetos">
-                {% for projeto in projetos  %}
-                <h3>{{ projeto[0] }}</h3>
-                <p>{{ projeto[1] }}</p>
-                <a href="https://github.com/Ana-Laura-Moratelli" target="_blank">{{ projeto[2] }}</a>
-                {% endfor %}
-                
-            </div>
-        </div>
+        {% endfor %}
     </section>
-</body>
-</html>
 {% endblock %}
