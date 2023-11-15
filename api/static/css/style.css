@@ -205,23 +205,13 @@ body{
     top: 150px;
     height: 250px;
 }
-.container-projetos .card-projetos .conteudo-projetos h2{
-    font-size: 1.5rem;
+.container-projetos .card-projetos .conteudo-projetos h3{
     font-weight: 700;
-    line-height: 3rem;
 }
 .container-projetos .card-projetos .conteudo-projetos a{
     display: inline-block;
     margin-top: 15px;
-    background: var(--azul-claro);
     padding: 10px;
-    text-decoration: none;
-    border-radius: 10px;
-    font-size: 18px;
-    font-weight: 700;
-}
-.container-projetos .card-projetos .conteudo-projetos a:hover{
-    background: var(--azul-escuro);
 }
 .conteudo-projetos p{
     font-size: 18px;
