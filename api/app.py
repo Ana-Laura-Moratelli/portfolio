@@ -5,7 +5,18 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return render_template('home.html')
+    icones = [
+        {
+            'link': 'https://www.linkedin.com/in/anamoratelli/',
+            'icone': 'fab fa-linkedin',
+        },
+          {
+            'link': 'https://github.com/Ana-Laura-Moratelli',
+            'icone': 'fab fa-github',
+        },
+        
+    ]     
+    return render_template('home.html', icones=icones)
 
 @app.route('/sobremim')
 def sobremim():
@@ -34,7 +45,42 @@ def sobremim():
             'texto': '2º lugar Olimípiada Brasileira de Astronomia em 2022',
         },
      ]
-    return render_template('sobremim.html', formacoes=formacoes, medalhas=medalhas)
+    conhecimentos = [
+        {
+            'icone': 'fa-solid fa-code',
+            'titulo': 'Front-end',
+            'lista': 'HTML 5',
+            'lista1': 'CSS 3',
+            'lista2': 'Java Script',
+            'titulo1': 'Frameworks',
+            'lista3': 'Bootstrap',  
+            'titulo2': '',
+            'lista4': '',  
+        },
+        {
+            'icone': 'fa-solid fa-laptop-code',
+            'titulo': 'Back-end',
+            'lista': 'Python',
+            'lista1': '',
+            'lista2': '',
+            'titulo1': 'Frameworks',
+            'lista3': 'Flask',   
+            'titulo2': 'Database',
+            'lista4': 'MySQL',  
+        },
+        {
+            'icone': 'fa-brands fa-dev',
+            'titulo': 'DevOps',
+            'lista': 'Linux',
+            'lista1': '',
+            'lista2': '',
+            'titulo1': 'Cloud',
+            'lista3': 'AWS',   
+            'titulo2': 'Virtualização',
+            'lista4': 'Docker',  
+        },
+     ]
+    return render_template('sobremim.html', formacoes=formacoes, medalhas=medalhas, conhecimentos=conhecimentos)
 
 @app.route('/projetos')
 def projetos():
@@ -60,10 +106,8 @@ def projetos():
             'link': 'https://github.com/Ana-Laura-Moratelli',
             'acesse': 'Acesse o repositório',
         },
-        # Adicione mais projetos aqui
     ]
     return render_template('projetos.html', projetos=projetos)
-
 
 @app.route('/contatos')
 def contatos():
