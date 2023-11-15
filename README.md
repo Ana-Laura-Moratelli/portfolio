@@ -33,8 +33,8 @@ Esse é meu portfólio onde apresenta as informações dos meus projetos e dos q
   <h3>Passo 3: Clone o Repositório</h3>
   <pre><code>git clone https://github.com/Ana-Laura-Moratelli/portfolio_digital_dsm</code></pre>
 
-  <h3>Passo 4: Entre na Pasta app</h3>
-  <pre><code>cd portfolio_digital_dsm/app</code></pre>
+  <h3>Passo 4: Entre na Pasta api</h3>
+  <pre><code>cd portfolio_digital_dsm/api</code></pre>
 
   <h3>Passo 5: Crie o Ambiente Virtual</h3>
   <pre><code>python -m venv venv</code></pre>
@@ -57,7 +57,7 @@ Esse é meu portfólio onde apresenta as informações dos meus projetos e dos q
 
   <h2>:open_file_folder: Pastas do repositório</h2>
   
-   <p>app: Apresenta os códigos fontes para execução do portfólio</p>
+   <p>api: Apresenta os códigos fontes para execução do portfólio</p>
    <p>mgt: Apresenta o wireframe mobile do portfólio</p>
    <p>static: Apresenta os códigos fontes estáticos</p>
    <p>css: Apresenta os códigos CSS</p
