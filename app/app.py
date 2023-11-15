@@ -9,7 +9,32 @@ def home():
 
 @app.route('/sobremim')
 def sobremim():
-    return render_template('sobremim.html')
+    formacoes = [
+        {
+            'titulo': 'Ensino médio e técnico em eletrônica',
+            'conclusao': 'Concluído em 2022',
+            'instituicao': 'Instituição: Colégios Univap',
+        },
+         {
+            'titulo': 'Desenvolvimento de software multiplataforma',
+            'conclusao': 'Conclusão prevista em agosto de 2026',
+            'instituicao': 'Instituição: Fatec Prof. Jessen Vidal',
+        },
+         {
+            'titulo': ' Curso de Inglês Intermediário',
+            'conclusao': 'Concluído em 2021',
+            'instituicao': 'Instituição: ELEC School',
+        },
+    ]
+    medalhas = [
+        {
+            'texto': '2º lugar Olimpíada Canguru de matemática em 2018',
+        },
+         {
+            'texto': '2º lugar Olimípiada Brasileira de Astronomia em 2022',
+        },
+     ]
+    return render_template('sobremim.html', formacoes=formacoes, medalhas=medalhas)
 
 @app.route('/projetos')
 def projetos():
@@ -42,7 +67,24 @@ def projetos():
 
 @app.route('/contatos')
 def contatos():
-    return render_template('contatos.html')
+    contatos = [
+        {
+            'link': 'mailto:ana.silva2237@fatec.sp.gov.br',
+            'icone': 'far fa-envelope',
+            'texto': 'ana.silva2237@fatec.sp.gov.br',
+        },
+         {
+            'link': 'https://www.linkedin.com/in/anamoratelli/',
+            'icone': 'fab fa-linkedin',
+            'texto': 'linkedin',
+        },
+         {
+            'link': 'https://github.com/Ana-Laura-Moratelli',
+            'icone': 'fab fa-github',
+            'texto': 'Git hub',
+        },
+    ]
+    return render_template('contatos.html', contatos=contatos)
 
 if __name__ == "__main__":
     app.run(debug=True)

@@ -5,70 +5,33 @@
 {% block body %}
     <h1 class="titulo-pag">Formação acadêmica</h1>
     <div class="container-card"> 
+      {% for formacao in formacoes %}
         <div class="card">
           <div class="card1">
             <p class="card-title">
               <span class="material-symbols-outlined">school</span>  
-              Ensino médio e técnico em eletrônica
+              {{ formacao['titulo']}}
             </p>
             <p class="card-text">
-              Concluído em 2022
+              {{ formacao['conclusao']}}
               <br>
-              Instituição: Colégios Univap
+              {{ formacao['instituicao']}}
             </p> 
           </div>
         </div>
-
-        <div class="card">
-          <div class="card1">
-            <p class="card-title"> <span class="material-symbols-outlined">
-              school
-              </span>  Desenvolvimento de software multiplataforma
-            </p><p class="card-text">
-              Conclusão prevista em agosto de 2026
-              <br>
-              Instituição: Fatec Prof. Jessen Vidal
-            </p>
-         
-            
-          </div>
-        </div>
-        <div class="card">
-          <div class="card1">
-            <p class="card-title"> <span class="material-symbols-outlined">
-              school
-              </span>  Curso de Inglês Intermediário
-            </p><p class="card-text">
-              Concluído em 2021
-              <br>
-              Instituição: ELEC School
-            </p>
-         
-            
-          </div>
-        </div>
-        </div>
+      {% endfor %}
+    </div>
     <h2>Medalhas</h2>
     <section class="container-sobre">
+      {% for medalha in medalhas %}
         <section class="sobre">
-           
                 <div class="card-medalha">
                     <span class="icone-medalha">
                         <i class="fa-solid fa-medal"></i>
-                      
                     </span>
-            <p>2º lugar Olimípiada Brasileira de Astronomia em 2022</p>
+            <p> {{ medalha['texto']}}</p>
             </section>
-            <section class="sobre">
-           
-                <div class="card-medalha">
-                    <span class="icone-medalha">
-                        <i class="fa-solid fa-medal"></i>
-                      
-                    </span>
-            <p>2º lugar Olimpíada Canguru de matemática em 2018</p>
-            </section>
-           
+      {% endfor %}      
     </section>
     <h2>Conhecimentos</h2>
     
@@ -130,7 +93,6 @@
                     <p>Docker</p>
                     </p>
                 </div>
-
                 </section>
 {% endblock %}
 
