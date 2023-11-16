@@ -16,6 +16,7 @@
     --cor-texto: #494949;
     --espaçamento: 50px;
     --padding-títulos: 150px;
+    --fonte-texto: 18px;
 }
 
 li{
@@ -109,12 +110,11 @@ body{
   }
   .card1 .card-title {
     font-weight: 700;
-    font-size: 24px;
     text-align: left;
   }
   .card1 .card-text{
     line-height: 1.5;
-    font-size: 18px;
+    font-size: var(--fonte-texto);
   }
   .card:hover::before {
     height: 100%;
@@ -214,11 +214,11 @@ body{
     padding: 10px;
 }
 .conteudo-projetos p{
-    font-size: 18px;
+    font-size: var(--fonte-texto);
 }
 @media (max-width:768px){
     *{
-        font-size: 18px;
+        font-size: var(--fonte-texto);
     }
     h3{
         font-size: 20px;
@@ -349,10 +349,8 @@ body{
     padding: 30px;
     align-items: center;
     flex-direction: column;
-    border-radius: 10px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     border-radius: 20px;
-    /* ver qual border tirar */
 }
 .card-sobre {
     border-radius: 20px;
@@ -403,7 +401,9 @@ body{
   }
 .titulo-pag{
     padding-top:var(--padding-títulos);
-    font-size: 24px;
+    font-size: 28px;
+    font-weight: 700;
+
 }
 h1{
     text-align: center;
@@ -411,6 +411,7 @@ h1{
 h2{
     text-align: center;
     padding: 20px 0;
+    
 }
 /* CONTATOS */
 .container-contatos{
@@ -429,13 +430,11 @@ h2{
     padding: 30px;
     align-items: center;
     flex-direction: column;
-    border-radius: 10px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    background: #F5F3F0;
     border-radius: 32px;
 }
 .text-contato{
-    font-size: 18px;
+    font-size: var(--fonte-texto);
 }
 
 
