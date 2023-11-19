@@ -207,6 +207,7 @@ body{
 }
 .container-projetos .card-projetos .conteudo-projetos h3{
     font-weight: 700;
+    font-size: 24px;
 }
 .container-projetos .card-projetos .conteudo-projetos a{
     display: inline-block;
@@ -219,9 +220,6 @@ body{
 @media (max-width:768px){
     *{
         font-size: var(--fonte-texto);
-    }
-    h3{
-        font-size: 20px;
     }
     /* RESPONSIVO NAV */
     .navbar{
@@ -411,7 +409,13 @@ h1{
 h2{
     text-align: center;
     padding: 20px 0;
-    
+}
+.sub-titulo{
+    font-size: 24px;
+    font-weight: 700;
+}
+.sub-titulo-card{
+    font-weight: 700;
 }
 /* CONTATOS */
 .container-contatos{

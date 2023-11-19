@@ -21,7 +21,7 @@
         </div>
       {% endfor %}
     </div>
-    <h2>Medalhas</h2>
+    <h2 class="sub-titulo">Medalhas</h2>
     <section class="container-sobre">
       {% for medalha in medalhas %}
         <section class="sobre">
@@ -33,23 +33,23 @@
         </section>
       {% endfor %}      
     </section>
-    <h2>Conhecimentos</h2>
+    <h2 class="sub-titulo">Conhecimentos</h2>
     <section class="container-sobre1">
         {% for conhecimento in conhecimentos %}
             <div class="card-sobre">
                 <span class="icone"><i class="{{ conhecimento['icone']}}"></i></span>
                 <p class="texto-card">
-                    <h3>{{ conhecimento['titulo']}}</h3>
+                    <h3 class="sub-titulo-card">{{ conhecimento['titulo']}}</h3>
                     <ul>
                         <li>{{ conhecimento['lista']}}</li>
                         <li>{{ conhecimento['lista1']}}</li>
                         <li>{{ conhecimento['lista2']}}</li>
                     </ul>
-                    <h3>{{ conhecimento['titulo1']}}</h3>
+                    <h3 class="sub-titulo-card">{{ conhecimento['titulo1']}}</h3>
                     <ul>
                         <li>{{ conhecimento['lista3']}}</li>
                     </ul>
-                    <h3>{{ conhecimento['titulo2']}}</h3>
+                    <h3 class="sub-titulo-card">{{ conhecimento['titulo2']}}</h3>
                     <ul>
                         <li>{{ conhecimento['lista4']}}</li>
                     </ul>     
