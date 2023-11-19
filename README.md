@@ -13,6 +13,7 @@ Esse é meu portfólio onde apresenta as informações dos meus projetos e dos q
     <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white&color=6DA2FF" />
     <img src="https://img.shields.io/badge/HTML5-239120?style=for-the-badge&logo=html5&logoColor=white&color=6DA2FF" />
     <img src="https://img.shields.io/badge/CSS3-239120?&style=for-the-badge&logo=css3&logoColor=white&color=6DA2FF" />
+    <img src="https://img.shields.io/badge/TailwindCSS-3776AB?style=for-the-badge&logo=TailwindCSS&logoColor=white&color=6DA2FF" />
     <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=white&color=6DA2FF"/>
     <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white&color=6DA2FF" />
     <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white&color=6DA2FF" />
@@ -20,8 +21,10 @@ Esse é meu portfólio onde apresenta as informações dos meus projetos e dos q
     
     
 </div>
+<h2>:iphone: Acesse:</h2>
+https://ana-laura-moratelli.vercel.app/
 
-<h2>:hammer_and_wrench: Como executar</h2>
+<h2>:hammer_and_wrench: Como executar:</h2>
 
   <h3>Passo 1: Certifique-se de ter o Git e o Python instalados.</h3>
     <p>Para baixar o Git, acesse <a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a>.</p>
@@ -33,8 +36,8 @@ Esse é meu portfólio onde apresenta as informações dos meus projetos e dos q
   <h3>Passo 3: Clone o Repositório</h3>
   <pre><code>git clone https://github.com/Ana-Laura-Moratelli/portfolio_digital_dsm</code></pre>
 
-  <h3>Passo 4: Entre na Pasta api</h3>
-  <pre><code>cd portfolio_digital_dsm/api</code></pre>
+  <h3>Passo 4: Entre na Pasta src</h3>
+  <pre><code>cd portfolio_digital_dsm/src</code></pre>
 
   <h3>Passo 5: Crie o Ambiente Virtual</h3>
   <pre><code>python -m venv venv</code></pre>
@@ -57,8 +60,9 @@ Esse é meu portfólio onde apresenta as informações dos meus projetos e dos q
 
   <h2>:open_file_folder: Pastas do repositório</h2>
   
-   <p>api: Apresenta os códigos fontes para execução do portfólio</p>
    <p>mgt: Apresenta o wireframe mobile do portfólio</p>
+   <p>src: Apresenta a pasta api e os requerimentos para execução do portfólio</p>
+   <p>api: Apresenta os códigos fontes para execução do portfólio</p>
    <p>static: Apresenta os códigos fontes estáticos</p>
    <p>css: Apresenta os códigos CSS</p
    <p>img: Apresenta as imagens</p>
