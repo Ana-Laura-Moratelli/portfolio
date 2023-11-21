@@ -15,9 +15,9 @@ Esse é meu portfólio onde apresenta as informações dos meus projetos e dos q
     <img src="https://img.shields.io/badge/CSS3-239120?&style=for-the-badge&logo=css3&logoColor=white&color=6DA2FF" />
     <img src="https://img.shields.io/badge/TailwindCSS-3776AB?style=for-the-badge&logo=TailwindCSS&logoColor=white&color=6DA2FF" />
     <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=white&color=6DA2FF"/>
-    <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white&color=6DA2FF" />
     <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white&color=6DA2FF" />
-    
+    <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white&color=6DA2FF" />
+    <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white&color=6DA2FF"/>
     
     
 </div>
