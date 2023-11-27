@@ -1,11 +1,9 @@
-<h1 align="center">Portfólio</h1>
+<h1>:star2: Portfólio</h1>
 <div align="center">
 <div align="justify">
-Olá! me chamo Ana Laura Moratelli, tenho 18 anos, sou estudante de desenvolvimento de software multiplataforma.
-Esse é meu portfólio onde apresenta as informações dos meus projetos e dos quais pretendo desenvolver.
+Esse é meu portfólio que foi desenvolvido na aula de design digital com o principal objetivo de ter as minhas informações pessoais, acadêmicas e meus contatos.
 </div>
-<br>
-<img src="mgt/img/ana.jpg" alt="ANA" style="width: 20%; border-radius: 25%;">
+
 </div>
 <h2>:computer: Tecnologias utilizadas: </h2>
 
