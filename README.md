@@ -5,7 +5,7 @@ Esse é meu portfólio que foi desenvolvido na aula de design digital com o prin
 </div>
 
 </div>
-<h2>:computer: Tecnologias utilizadas: </h2>
+<h2>💻 Tecnologias utilizadas: </h2>
 
 <div align="center">
     <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white&color=6DA2FF" />
@@ -19,10 +19,10 @@ Esse é meu portfólio que foi desenvolvido na aula de design digital com o prin
     
     
 </div>
-<h2>:iphone: Acesse:</h2>
+<h2>📱 Acesse:</h2>
 https://ana-laura-moratelli.vercel.app/
 
-<h2>:hammer_and_wrench: Como executar:</h2>
+<h2>🛠️ Como executar:</h2>
 
   <h3>Passo 1: Certifique-se de ter o Git e o Python instalados.</h3>
     <p>Para baixar o Git, acesse <a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a>.</p>
