@@ -103,7 +103,7 @@ def projetos():
             'img': '../static/img/img_port.png',
             'titulo': 'Portfólio',
             'texto': 'Meu portfólio que foi desenvolvido com o objetivo de ter as minhas informações pessoais, acadêmicas e meus contatos.',
-            'link': 'https://github.com/Ana-Laura-Moratelli',
+            'link': 'https://github.com/Ana-Laura-Moratelli/portfolio',
             'acesse': 'Acesse o repositório',
         },
     ]
