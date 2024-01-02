@@ -106,6 +106,13 @@ def projetos():
             'link': 'https://github.com/Ana-Laura-Moratelli/portfolio',
             'acesse': 'Acesse o repositório',
         },
+        {
+            'img': '../static/img/img_logs.png',
+            'titulo': 'Gerenciador de Logs',
+            'texto': 'Uma tela para um sistema de autenticação e cadeia de custódia, para o gerenciamento do histórico de logs em um site de compras. ',
+            'link': 'https://github.com/Ana-Laura-Moratelli/gerenciador-logs',
+            'acesse': 'Acesse o repositório',
+        },
     ]
     return render_template('projetos.html', projetos=projetos)
 
