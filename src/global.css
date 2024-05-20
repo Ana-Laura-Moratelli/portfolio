@@ -406,7 +406,7 @@ body{
     top: -45px;
   }
   .texto-card {
-    padding: 20px;
+    padding: 40px 20px 0;
   }
 .titulo-pag{
     padding-top:var(--padding-títulos);
