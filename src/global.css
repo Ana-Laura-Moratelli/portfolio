@@ -217,6 +217,17 @@ body{
 .conteudo-projetos p{
     font-size: var(--fonte-texto);
 }
+
+.buttonAcesseRepositorio{
+  background-color: var(--azul-claro);
+  border: none;
+  border-radius: 5px;
+  padding: 3px;
+  cursor: pointer;
+}
+.buttonAcesseRepositorio:hover{
+  background-color: var(--azul-escuro);
+}
 @media (max-width:768px){
     *{
         font-size: var(--fonte-texto);
