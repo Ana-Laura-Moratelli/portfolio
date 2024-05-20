@@ -32,10 +32,10 @@ https://ana-laura-moratelli.vercel.app/
   <p>Pesquise por "Terminal" na barra de tarefas do seu dispositivo e abra o terminal.</p>
 
   <h3>Passo 3: Clone o Repositório</h3>
-  <pre><code>git clone https://github.com/Ana-Laura-Moratelli/portfolio_digital_dsm</code></pre>
+  <pre><code>git clone https://github.com/Ana-Laura-Moratelli/portfolio</code></pre>
 
   <h3>Passo 4: Entre na Pasta src</h3>
-  <pre><code>cd portfolio_digital_dsm/src</code></pre>
+  <pre><code>cd portfolio/src</code></pre>
 
   <h3>Passo 5: Crie o Ambiente Virtual</h3>
   <pre><code>python -m venv venv</code></pre>
