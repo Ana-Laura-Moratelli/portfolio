@@ -19,7 +19,7 @@ Esse é meu portfólio que foi desenvolvido na aula de design digital com o prin
     
 </div>
 <h2>📱 Acesse:</h2>
-https://ana-laura-moratelli.vercel.app/
+https://analauramoratelli.com.br/
 
 <h2>🛠️ Como executar:</h2>
 
