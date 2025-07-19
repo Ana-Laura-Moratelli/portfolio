@@ -1,45 +1,177 @@
-import React from 'react';
-import ana from '../../assets/img/ana.svg';
-import { Header } from '../../components/Header';
-import { Icone } from '../../types/Icone';
+import { useState, useEffect } from "react"
+import Header from "../../components/Header"
+import Hero from "../../components/Hero"
+import About from "../../components/About"
+import Experience from "../../components/Experience"
+import Projects from "../../components/Projects"
+import Skills from "../../components/Skills"
+import Education from "../../components/Education"
+import Contact from "../../components/Contact"
+import Footer from "../../components/Footer"
+import "./styles.css"
 
-const IconeLink: React.FC<Icone> = ({ link, icone }) => {
-    return (
-        <a href={link} target='blank'>
-            <div className="btn">
-                <i className={icone}></i>
-            </div>
-        </a>
-    );
-};
+export default function Home() {
+  const [activeSection, setActiveSection] = useState("home")
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ["home", "about", "experience", "projects", "skills", "education", "contact"]
+      const scrollPosition = window.scrollY + 100
 
-export const Home = () => {
-    const Icones = [
-        {
-            icone: "fab fa-linkedin",
-            link: "https://www.linkedin.com/in/anamoratelli/",
-        },
-        {
-            icone: "fab fa-github",
-            link: "https://github.com/Ana-Laura-Moratelli",
+      for (const section of sections) {
+        const element = document.getElementById(section)
+        if (element) {
+          const offsetTop = element.offsetTop
+          const offsetHeight = element.offsetHeight
+
+          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+            setActiveSection(section)
+            break
+          }
         }
-    ];
-    return (
-        <div>
-            <Header />
-            <section className="home">
-                <section className="home-text">
-                    <p>Olá, sou a Ana Laura Moratelli, tenho 19 anos. Este é meu portfólio, onde você encontra minhas informações de contato, um pouco sobre mim e projetos realizados, além daqueles que pretendo desenvolver durante minha jornada na faculdade de desenvolvimento de software!</p>
+      }
+    }
 
-                    <div className="container-link">
-                        {Icones.map((icone, index) => (
-                            <IconeLink key={index} {...icone} />
-                        ))}
-                    </div>
-                </section>
-                <img className='image-ana' src={ana} alt="ana" />
-            </section>
-        </div>
-    );
-};
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
+  // Intersection Observer for scroll animations
+  useEffect(() => {
+    // Add scroll progress bar
+    const progressBar = document.createElement('div')
+    progressBar.className = 'scroll-progress'
+    document.body.appendChild(progressBar)
+
+    const updateScrollProgress = () => {
+      const scrollTop = window.pageYOffset
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight
+      const scrollPercent = scrollTop / docHeight
+      progressBar.style.transform = `scaleX(${scrollPercent})`
+    }
+
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -100px 0px'
+    }
+
+    const sectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('section-animate')
+          
+          // Animate content within sections with staggered delays
+          const animatableElements = entry.target.querySelectorAll(
+            '.about-content > *, .timeline-item, .project-card, .tech-card, .soft-skill-card, .education-card, .contact-card, .contact-form, .section-header, .highlight-item'
+          )
+          
+          animatableElements.forEach((element, index) => {
+            setTimeout(() => {
+              element.classList.add('content-animate')
+              
+              // Add special effects for specific elements
+              if (element.classList.contains('section-title')) {
+                element.classList.add('text-reveal', 'active')
+              }
+              if (element.classList.contains('highlight-number')) {
+                element.classList.add('count-up', 'active')
+                animateCountUp(element)
+              }
+            }, index * 150) // 150ms stagger between elements
+          })
+        }
+      })
+    }, observerOptions)
+
+    const contentObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('content-animate', 'active')
+          
+          // Add floating animation to hero image
+          if (entry.target.classList.contains('image-container')) {
+            entry.target.classList.add('float-element')
+          }
+        }
+      })
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' })
+
+    // Count-up animation function
+    const animateCountUp = (element: Element) => {
+      const target = parseInt(element.textContent?.replace(/\D/g, '') || '0')
+      const duration = 2000
+      const stepTime = 50
+      const steps = duration / stepTime
+      const increment = target / steps
+      let current = 0
+
+      const timer = setInterval(() => {
+        current += increment
+        if (current >= target) {
+          if (element.textContent) {
+            element.textContent = element.textContent.replace(/\d+/, target.toString())
+          }
+          clearInterval(timer)
+        } else {
+          if (element.textContent) {
+            element.textContent = element.textContent.replace(/\d+/, Math.floor(current).toString())
+          }
+        }
+      }, stepTime)
+    }
+
+    // Parallax effect for scroll
+    const handleParallax = () => {
+      const scrolled = window.pageYOffset
+      const parallaxElements = document.querySelectorAll('.parallax-bg')
+      
+      parallaxElements.forEach((element) => {
+        const speed = 0.5
+        const htmlElement = element as HTMLElement
+        htmlElement.style.transform = `translateY(${scrolled * speed}px)`
+      })
+      
+      updateScrollProgress()
+    }
+
+    // Observe sections
+    const sections = document.querySelectorAll('.about, .experience, .projects, .skills, .education, .contact')
+    sections.forEach((section) => sectionObserver.observe(section))
+
+    // Observe individual content elements for more granular control
+    const contentElements = document.querySelectorAll(
+      '.section-header, .hero-actions, .form-group, .image-container, .social-link, .btn-primary, .btn-secondary'
+    )
+    contentElements.forEach((element) => contentObserver.observe(element))
+
+    // Add scroll event listeners
+    window.addEventListener('scroll', handleParallax, { passive: true })
+    window.addEventListener('scroll', updateScrollProgress, { passive: true })
+
+    return () => {
+      sections.forEach((section) => sectionObserver.unobserve(section))
+      contentElements.forEach((element) => contentObserver.unobserve(element))
+      window.removeEventListener('scroll', handleParallax)
+      window.removeEventListener('scroll', updateScrollProgress)
+      if (document.body.contains(progressBar)) {
+        document.body.removeChild(progressBar)
+      }
+    }
+  }, [])
+
+  return (
+    <div className="portfolio">
+      <Header activeSection={activeSection} />
+      <main>
+        <Hero />
+        <About />
+        <Experience />
+        <Projects />
+        <Skills />
+        <Education />
+        <Contact />
+      </main>
+      <Footer />
+    </div>
+  )
+}
