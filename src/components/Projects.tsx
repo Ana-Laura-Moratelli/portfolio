@@ -55,7 +55,7 @@ export default function Projects() {
         {
             title: "Unes",
             description:
-                "Site fictício desenvolvido para estudo de bootstrap.",
+                "Site desenvolvido com o objetivo de praticar conhecimentos em desenvolvimento web, utilizando HTML, CSS e o framework Bootstrap para a construção da interface.",
             technologies: ["HTML", "CSS", "BOOTSTRAP", "FLASK", "PYTHON", "MYSQL"],
             image: unesImage,
             category: "Site",

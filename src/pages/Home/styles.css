@@ -1028,7 +1028,6 @@ p {
 .form-group {
     display: flex;
     flex-direction: column;
-    position: relative;
 }
 
 .form-group label {
@@ -1105,22 +1104,12 @@ p {
     background: var(--bg-tertiary);
 }
 
-.country-flag-center {
-    display: flex;
-    align-items: center;
-    height: 100%;
-}
-
-.country-flag {
-    font-size: 1.4rem;
-
-}
-
 .country-info {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    align-items: flex-start;
     flex: 1;
+    min-width: 0;
 }
 
 .country-name-short {
@@ -1409,12 +1398,7 @@ p {
         justify-content: space-between;
     }
 
-    .country-info {
-        display: flex;
-        flex-direction: column;
-        flex: 1;
-        min-width: 0;
-    }
+
 
     .country-name-short {
         max-width: none;
@@ -1833,25 +1817,7 @@ p {
     animation: fadeInUp 0.8s ease 0.2s both;
 }
 
-.form-group {
-    animation: fadeInUp 0.6s ease both;
-}
 
-.form-row:nth-child(1) .form-group {
-    animation-delay: 0.1s;
-}
-
-.form-row:nth-child(2) .form-group {
-    animation-delay: 0.2s;
-}
-
-.form-row:nth-child(3) .form-group {
-    animation-delay: 0.3s;
-}
-
-.form-row:nth-child(4) .form-group {
-    animation-delay: 0.4s;
-}
 
 .form-submit {
     animation: scaleIn 0.6s ease 0.5s both;
@@ -2471,16 +2437,8 @@ html {
     transform: translateY(0);
 }
 
-.form-group {
-    opacity: 0;
-    transform: translateX(-20px);
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.form-group.content-animate {
-    opacity: 1;
-    transform: translateX(0);
-}
+
 
 .form-submit {
     opacity: 0;

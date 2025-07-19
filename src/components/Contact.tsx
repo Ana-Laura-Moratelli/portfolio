@@ -164,9 +164,6 @@ export default function Contact() {
                                                 className="country-button"
                                                 onClick={() => setIsCountryDropdownOpen(!isCountryDropdownOpen)}
                                             >
-                                                <div className="country-flag-center">
-                                                    <span className="country-flag">{selectedCountry.flag}</span>
-                                                </div>
                                                 <span className="country-info">
                                                     <span className="country-name">{selectedCountry.name}</span>
                                                     <span className="country-dial">{selectedCountry.dial}</span>
@@ -192,7 +189,6 @@ export default function Contact() {
                                                                 })
                                                             }}
                                                         >
-                                                            <span className="country-flag">{country.flag}</span>
                                                             <div className="country-details">
                                                                 <span className="country-name">{country.name}</span>
                                                                 <span className="country-dial">{country.dial}</span>
