@@ -6,6 +6,12 @@ export default function NotFound() {
     <div className="not-found-page">
       <div className="container">
         <div className="not-found-content">
+          <div className="floating-elements">
+            <div className="floating-circle circle-1"></div>
+            <div className="floating-circle circle-2"></div>
+            <div className="floating-circle circle-3"></div>
+          </div>
+          
           <div className="not-found-animation">
             <div className="error-code">404</div>
           </div>

@@ -18,14 +18,27 @@ export function useRouteValidation() {
 
   useEffect(() => {
     const checkRoute = () => {
-      const path = window.location.pathname + window.location.hash
-      setCurrentPath(path)
+      const pathname = window.location.pathname
+      const hash = window.location.hash
+      const fullPath = pathname + hash
+      setCurrentPath(fullPath)
+      
+      // Se é a raiz ou tem apenas hash, é válido
+      if (pathname === '/' || pathname === '') {
+        setIsValidRoute(true)
+        return
+      }
       
       // Verifica se é uma rota válida
       const isValid = validRoutes.some(route => {
-        if (route === '/') return path === '/' || path === ''
-        if (route.startsWith('/#')) return path === route || path === route.substring(1)
-        return path === route
+        if (route === '/') return pathname === '/'
+        if (route === '/home') return pathname === '/home'
+        if (route.startsWith('/#')) {
+          // Para rotas com hash, aceita tanto /#section quanto /section
+          const section = route.substring(2) // remove /#
+          return hash === `#${section}` || pathname === `/${section}`
+        }
+        return pathname === route
       })
       
       setIsValidRoute(isValid)
