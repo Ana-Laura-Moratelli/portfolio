@@ -1455,11 +1455,7 @@ p {
         padding: 1.5rem;
     }
 
-    .project-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.5rem;
-    }
+
 
     .tech-grid {
         grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
@@ -1480,6 +1476,24 @@ p {
     .project-action-btn {
         padding: 10px 14px;
         font-size: 0.85rem;
+    }
+
+    /* Ensure elements are visible on mobile even without animations */
+    .projects .section-title,
+    .projects .section-subtitle,
+    .project-card {
+        opacity: 1 !important;
+        transform: none !important;
+        visibility: visible !important;
+    }
+
+    /* Reduce animation delays on mobile */
+    .tech-tag {
+        animation-delay: 0s !important;
+    }
+
+    .project-action-btn {
+        animation-delay: 0s !important;
     }
 }
 

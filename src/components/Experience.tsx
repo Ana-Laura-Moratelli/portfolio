@@ -10,7 +10,7 @@ export default function Experience() {
     },
     {
       title: "Frontend Developer",
-      company: "Coyó Software",
+      company: "Coyô Software",
       period: "Agosto 2024 até o momento",
       description:
         "Como Frontend Developer, sou responsável por criar interfaces de usuário intuitivas e responsivas, assegurando uma experiência digital eficiente. Minhas responsabilidades incluem o desenvolvimento de aplicações web com foco em usabilidade e performance, a criação de layouts adaptáveis e acessíveis, e a implementação de melhores práticas de design UX, sempre com atenção aos detalhes e à experiência do usuário final.",
@@ -18,7 +18,7 @@ export default function Experience() {
     },
     {
       title: "Suporte Técnico / Analista de Projetos",
-      company: "Micro Assit Informática",
+      company: "Micro Assist Informática",
       period: "Janeiro 2024 até Agosto 2024",
       description:
         "Como suporte técnico, desempenho um papel fundamental na gestão de TI para empresas. Minhas responsabilidades incluem a administração de servidores, implementação e manutenção de serviços de virtualização, e gestão de serviços em nuvem. Como Analista de Projetos, realizo reuniões com clientes para entender suas necessidades para garantir que nossos produtos atendam às expectativas e realizo as documentações dos projetos e dos novos clientes. Além disso, trabalho no desenvolvimento de novos produtos, atuando como desenvolvedora front-end",

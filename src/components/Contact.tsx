@@ -71,7 +71,7 @@ export default function Contact() {
             form.append('_captcha', 'false')
             form.append('_template', 'table')
 
-            const response = await fetch('https://formsubmit.co/analauramoratelli203@gmail.com', {
+            const response = await fetch('https://formsubmit.co/daf2b75e64fb846c63068f320fa8dc94', {
                 method: 'POST',
                 body: form
             })

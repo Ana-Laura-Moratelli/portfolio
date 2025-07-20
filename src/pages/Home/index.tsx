@@ -50,9 +50,12 @@ export default function Home() {
       progressBar.style.transform = `scaleX(${scrollPercent})`
     }
 
+    // Detect if we're on mobile
+    const isMobile = window.innerWidth <= 768
+
     const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -100px 0px'
+      threshold: isMobile ? 0.05 : 0.1, // Lower threshold for mobile
+      rootMargin: isMobile ? '0px 0px -50px 0px' : '0px 0px -100px 0px' // Less aggressive rootMargin for mobile
     }
 
     const sectionObserver = new IntersectionObserver((entries) => {
@@ -66,6 +69,7 @@ export default function Home() {
           )
           
           animatableElements.forEach((element, index) => {
+            const delay = isMobile ? index * 100 : index * 150 // Faster animations on mobile
             setTimeout(() => {
               element.classList.add('content-animate')
               
@@ -77,7 +81,7 @@ export default function Home() {
                 element.classList.add('count-up', 'active')
                 animateCountUp(element)
               }
-            }, index * 150) // 150ms stagger between elements
+            }, delay)
           })
         }
       })
@@ -94,7 +98,10 @@ export default function Home() {
           }
         }
       })
-    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' })
+    }, { 
+      threshold: isMobile ? 0.05 : 0.1, 
+      rootMargin: isMobile ? '0px 0px -25px 0px' : '0px 0px -50px 0px' 
+    })
 
     // Count-up animation function
     const animateCountUp = (element: Element) => {
@@ -148,7 +155,30 @@ export default function Home() {
     window.addEventListener('scroll', handleParallax, { passive: true })
     window.addEventListener('scroll', updateScrollProgress, { passive: true })
 
+    // Fallback: Force animations after 2 seconds for mobile compatibility
+    const fallbackTimeout = setTimeout(() => {
+      if (isMobile) {
+        const allSections = document.querySelectorAll('.about, .experience, .projects, .skills, .education, .contact')
+        allSections.forEach((section) => {
+          if (!section.classList.contains('section-animate')) {
+            section.classList.add('section-animate')
+            
+            const animatableElements = section.querySelectorAll(
+              '.about-content > *, .timeline-item, .project-card, .tech-card, .soft-skill-card, .education-card, .contact-card, .contact-form, .section-header, .highlight-item'
+            )
+            
+            animatableElements.forEach((element, index) => {
+              setTimeout(() => {
+                element.classList.add('content-animate')
+              }, index * 50) // Fast stagger for fallback
+            })
+          }
+        })
+      }
+    }, 2000)
+
     return () => {
+      clearTimeout(fallbackTimeout)
       sections.forEach((section) => sectionObserver.unobserve(section))
       contentElements.forEach((element) => contentObserver.unobserve(element))
       window.removeEventListener('scroll', handleParallax)
