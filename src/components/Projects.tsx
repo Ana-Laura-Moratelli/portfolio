@@ -18,7 +18,7 @@ export default function Projects() {
                 "Esse projeto consiste em desenvolver um site com o objetivo de ajudar mães de crianças com Insuficiência Renal Crônica, oferecendo orientações e informações importantes. Além disso, foi criado um blog para compartilhar histórias de mães.",
             technologies: ["FIGMA", "HTML", "CSS", "JAVASCRIPT", "FLASK", "PYTHON", "MYSQL"],
             image: nefroImage,
-            category: "Sistema",
+            category: "Site",
             status: "Concluído",
             github: "https://github.com/Sync-FATEC/API-2023.2-1SEM",
         },
