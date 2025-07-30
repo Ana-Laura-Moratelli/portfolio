@@ -957,7 +957,7 @@ p {
 /* Footer Styles */
 .footer {
     background: var(--bg-primary);
-    color: var(--bg-primary);
+    color: var(--text-primary);
     padding: 3rem 0 1rem;
 }
 
@@ -973,11 +973,12 @@ p {
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
-    color: var(--bg-primary);
+    color: var(--text-primary);
 }
 
 .footer-info p {
-    color: var(--text-tertiary);
+    color: var(--text-secondary);
+    font-weight: 500;
 }
 
 .footer-social {
@@ -988,23 +989,46 @@ p {
 
 .footer .social-link {
     background: var(--bg-tertiary);
-    color: var(--text-tertiary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
 }
 
 .footer .social-link:hover {
     background: var(--accent-primary);
     color: white;
+    border-color: var(--accent-primary);
 }
 
 .footer-bottom {
     text-align: center;
     padding-top: 2rem;
-    border-top: 1px solid var(--bg-tertiary);
+    border-top: 1px solid var(--border-color);
 }
 
 .footer-bottom p {
-    color: var(--text-tertiary);
+    color: var(--text-secondary);
     margin: 0;
+    font-weight: 500;
+}
+
+/* Garantir contraste adequado no footer */
+.footer-info p {
+    color: var(--text-primary) !important;
+    font-weight: 600;
+}
+
+.footer-bottom p {
+    color: var(--text-primary) !important;
+    font-weight: 600;
+}
+
+/* Dark theme específico para footer */
+[data-theme="dark"] .footer-info p {
+    color: var(--text-primary) !important;
+}
+
+[data-theme="dark"] .footer-bottom p {
+    color: var(--text-primary) !important;
 }
 
 /* Contact Form Styles */
