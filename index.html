@@ -95,6 +95,14 @@
 </head>
 
 <body>
+  <script>
+    // Previne o navegador de restaurar a posição do scroll ao recarregar
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+    // Força scroll para o topo imediatamente
+    window.scrollTo(0, 0);
+  </script>
   <div id="root"></div>
   <noscript><img height="1" width="1" style="display:none"
       src="https://www.facebook.com/tr?id=631032823371161&ev=PageView&noscript=1" /></noscript>

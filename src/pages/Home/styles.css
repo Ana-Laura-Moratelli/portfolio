@@ -626,6 +626,11 @@ p {
     color: var(--success-color);
 }
 
+.project-status.andamento {
+    background: var(--warning-bg);
+    color: var(--warning-color);
+}
+
 .project-status.em-desenvolvimento {
     background: var(--warning-bg);
     color: var(--warning-color);
@@ -2581,7 +2586,8 @@ body {
 }
 
 /* Respect user's motion preferences */
-@media (prefers-reduced-motion: reduce) {
+/* Comentado para manter todas as animações funcionando */
+/* @media (prefers-reduced-motion: reduce) {
 
     *,
     *::before,
@@ -2600,7 +2606,7 @@ body {
     .image-container:hover {
         animation: none;
     }
-}
+} */
 
 /* Performance optimizations */
 .project-card,

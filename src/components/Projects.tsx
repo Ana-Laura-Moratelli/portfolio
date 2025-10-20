@@ -9,6 +9,7 @@ import huntImage from '../assets/hunt.png'
 import huntpilotImage from '../assets/huntpilot.png'
 import appelogiosImage from '../assets/appelogios.png'
 import atlantisImage from '../assets/atlantis.png'
+import almoxarifadoImage from '../assets/almoxarifado.png'
 
 export default function Projects() {
     const projects = [
@@ -65,7 +66,7 @@ export default function Projects() {
         {
             title: "Atlantis",
             description:
-                "A Atlantis é uma plataforma integrada desenvolvida para auxiliar parques aquáticos, clubes e hoteis na gestão e organização de suas atividades cotidianas.",
+                "A Atlantis é uma plataforma integrada desenvolvida para auxiliar parques aquáticos, clubes e hotéis na gestão e organização de suas atividades cotidianas.",
             technologies: ["TAILWIND CSS", "TYPESCRIPT", "NODE.JS", "REACT", "MYSQL"],
             image: atlantisImage,
             category: "Sistema",
@@ -113,12 +114,22 @@ export default function Projects() {
         {
             title: "Hunt Pilot",
             description:
-                "Desenvolvi a landing page do Hunt Pilot, uma sistema com inteligência artificial que atua pelo WhatsApp.",
+                "Desenvolvi a landing page do Hunt Pilot, um sistema com inteligência artificial que atua pelo WhatsApp.",
             technologies: ["HTML", "CSS", "JAVASCRIPT"],
             image: huntpilotImage,
             category: "Landing Page",
             status: "Concluído",
-            demo: "https://huntsales.com.br/lp-hunt-pilot.html",
+            demo: "https://huntsales.com.br/huntpilot/",
+        },
+        {
+            title: "App gestão almoxarifado militar",
+            description:
+                "Aplicativo para gerenciar o almoxarifado militar, facilitando o controle de estoque e a logística de materiais.",
+            technologies: ["FIGMA", "TYPESCRIPT", "CSS", "HTML", "REACT", "FLUTTER", "PYTHON", "FIREBASE", "POSTGREE"],
+            image: almoxarifadoImage,
+            category: "Mobile",
+            status: "Andamento",
+            github: "https://github.com/Sync-FATEC/API-2025.2-5SEM",
         },
     ]
 
@@ -131,7 +142,7 @@ export default function Projects() {
                 </div>
 
                 <div className="projects-grid">
-                    {projects.map((project, index) => (
+                    {projects.slice().reverse().map((project, index) => (
                         <div key={index} className="project-card">
                             <div className="project-image">
                                 <img src={project.image || "/placeholder.svg"} alt={project.title} />
