@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import Home from './pages/Home';
+import Services from './pages/Services';
 import NotFound from './components/NotFound';
 import { ThemeProvider } from './context/ThemeContext';
 import { useRouteValidation } from './hooks';
@@ -26,9 +27,15 @@ function App() {
 
 function AppContent() {
   const { isValidRoute } = useRouteValidation();
+  const currentPath = window.location.pathname;
 
   if (!isValidRoute) {
     return <NotFound />;
+  }
+
+  // Roteamento simples baseado no pathname
+  if (currentPath === '/servicos' || currentPath === '/servicos/') {
+    return <Services />;
   }
 
   return <Home />;

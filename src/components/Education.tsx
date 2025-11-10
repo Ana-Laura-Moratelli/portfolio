@@ -1,13 +1,13 @@
 export default function Education() {
   const education = [
     {
-      title: "Desenvolvimento de software multiplataforma",
+      title: "Desenvolvimento de Software Multiplataforma",
       institution: "Fatec Prof. Jessen Vidal",
       period: "Conclusão em agosto de 2026",
       icon: "🎓",
     },
     {
-      title: "Ensino médio e técnico em eletrônica",
+      title: "Ensino Médio e Técnico em Eletrônica",
       institution: "Colégios Univap",
       period: "Concluído em 2022",
       icon: "🎓",

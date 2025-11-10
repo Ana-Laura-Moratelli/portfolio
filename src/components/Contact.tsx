@@ -120,7 +120,7 @@ export default function Contact() {
             <div className="container">
                 <div className="section-header">
                     <h2 className="section-title">Contatos</h2>
-                    <p className="section-subtitle">Vamos conversar sobre oportunidades e projetos</p>
+                    <p className="section-subtitle">Vamos conversar sobre oportunidades e projetos!</p>
                 </div>
 
                 <div className="contact-form-container">

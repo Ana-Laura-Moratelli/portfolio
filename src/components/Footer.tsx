@@ -4,7 +4,7 @@ export default function Footer() {
       <div className="container">
         <div className="footer-content">
           <div className="footer-info">
-            <p>Frontend Developer apaixonada por criar experiências digitais incríveis.</p>
+            <p>Desenvolvedora Frontend apaixonada por criar experiências digitais incríveis.</p>
           </div>
           
           <div className="footer-social">

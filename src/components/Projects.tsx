@@ -16,8 +16,8 @@ export default function Projects() {
         {
             title: "Site Nefrologia Pediátrica",
             description:
-                "Esse projeto consiste em desenvolver um site com o objetivo de ajudar mães de crianças com Insuficiência Renal Crônica, oferecendo orientações e informações importantes. Além disso, foi criado um blog para compartilhar histórias de mães.",
-            technologies: ["FIGMA", "HTML", "CSS", "JAVASCRIPT", "FLASK", "PYTHON", "MYSQL"],
+                "Esse projeto consiste em desenvolver um site com o objetivo de ajudar mães de crianças com insuficiência renal crônica, oferecendo orientações e informações importantes. Além disso, foi criado um blog para compartilhar histórias de mães.",
+            technologies: ["Figma", "HTML", "CSS", "JavaScript", "Flask", "Python", "MySQL"],
             image: nefroImage,
             category: "Site",
             status: "Concluído",
@@ -27,27 +27,27 @@ export default function Projects() {
             title: "Service Desk",
             description:
                 "Esse projeto consiste em desenvolver uma solução para gestão de chamados de serviços, com foco em funcionalidades como cadastros, registro de chamados e gerenciamento do SLA.",
-            technologies: ["FIGMA", "HTML", "CSS", "REACT", "TYPESCRIPT", "NODE.JS", "MYSQL"],
+            technologies: ["Figma", "HTML", "CSS", "React", "TypeScript", "Node.js", "MySQL"],
             image: serviceDeskImage,
             category: "Sistema",
             status: "Concluído",
             github: "https://github.com/Sync-FATEC/API-2024.1-2SEM",
         },
         {
-            title: "Portal Transparência",
+            title: "Portal da Transparência",
             description:
-                "Este projeto consiste em desenvolver um portal transparência para a Fundação FAPG. Nosso objetivo é entregar uma plataforma eficiente, com funcionalidades que permitam o gerenciamento completo dos projetos.",
-            technologies: ["FIGMA", "HTML", "CSS", "REACT", "TYPESCRIPT", "JAVA", "SPRING", "PYTHON", "MYSQL"],
+                "Este projeto consiste em desenvolver um portal da transparência para a Fundação FAPG. O objetivo foi entregar uma plataforma eficiente, com funcionalidades que permitem o gerenciamento completo dos projetos.",
+            technologies: ["Figma", "HTML", "CSS", "React", "TypeScript", "Java", "Spring", "Python", "MySQL"],
             image: fapgImage,
             github: "https://github.com/Sync-FATEC/API-2024.2-3SEM",
             category: "Sistema",
             status: "Concluído",
         },
         {
-            title: "Sistema de monitoramento ambiental",
+            title: "Sistema de Monitoramento Ambiental",
             description:
                 "Este projeto tem como objetivo desenvolver um sistema de monitoramento ambiental para a Tecsus, permitindo a coleta, processamento e visualização de dados meteorológicos em tempo real.",
-            technologies: ["FIGMA", "HTML", "CSS", "REACT", "TYPESCRIPT", "MONGO", "MYSQL"],
+            technologies: ["Figma", "HTML", "CSS", "React", "TypeScript", "MongoDB", "MySQL"],
             image: tecsusImage,
             category: "Sistema",
             status: "Concluído",
@@ -57,7 +57,7 @@ export default function Projects() {
             title: "Unes",
             description:
                 "Site desenvolvido com o objetivo de praticar conhecimentos em desenvolvimento web, utilizando HTML, CSS e o framework Bootstrap para a construção da interface.",
-            technologies: ["HTML", "CSS", "BOOTSTRAP", "FLASK", "PYTHON", "MYSQL"],
+            technologies: ["HTML", "CSS", "Bootstrap", "Flask", "Python", "MySQL"],
             image: unesImage,
             category: "Site",
             status: "Concluído",
@@ -67,17 +67,17 @@ export default function Projects() {
             title: "Atlantis",
             description:
                 "A Atlantis é uma plataforma integrada desenvolvida para auxiliar parques aquáticos, clubes e hotéis na gestão e organização de suas atividades cotidianas.",
-            technologies: ["TAILWIND CSS", "TYPESCRIPT", "NODE.JS", "REACT", "MYSQL"],
+            technologies: ["Tailwind CSS", "TypeScript", "Node.js", "React", "MySQL"],
             image: atlantisImage,
             category: "Sistema",
             status: "Concluído",
             github: "https://github.com/Ana-Laura-Moratelli/atlantis",
         },
         {
-            title: "Trip Wise",
+            title: "TripWise",
             description:
-                "O App tripWise tem como objetivo facilitar a organização de viagens, permitindo que os usuários planejem itinerários, pesquisem voos, acomodações e entre outras funções.",
-            technologies: ["TYPESCRIPT", "REACT NATIVE", "EXPO", "FIREBASE"],
+                "O app TripWise tem como objetivo facilitar a organização de viagens, permitindo que os usuários planejem itinerários e pesquisem voos e acomodações, entre outras funções.",
+            technologies: ["TypeScript", "React Native", "Expo", "Firebase"],
             image: tripwiseImage,
             category: "Mobile",
             status: "Concluído",
@@ -86,8 +86,8 @@ export default function Projects() {
         {
             title: "Pet Finder App",
             description:
-                "Aplicativo para ajudar na busca e adoção de animais. Sistema de geolocalização e notificações em tempo real.",
-            technologies: ["FIGMA", "EXPERIÊNCIA DO USUÁRIO"],
+                "Aplicativo desenvolvido para ajudar na busca e adoção de animais, com sistema de geolocalização e notificações em tempo real.",
+            technologies: ["Figma", "Experiência do Usuário"],
             image: petfinderImage,
             category: "Mobile",
             status: "Concluído",
@@ -96,7 +96,7 @@ export default function Projects() {
             title: "App Elogios",
             description:
                 "Aplicativo corporativo para reconhecimento e feedback entre colaboradores.",
-            technologies: ["JAVASCRIPT", "REACT NATIVE", "EXPO", "POSTGRESQL"],
+            technologies: ["JavaScript", "React Native", "Expo", "PostgreSQL"],
             image: appelogiosImage,
             category: "Mobile",
             status: "Concluído",
@@ -105,7 +105,7 @@ export default function Projects() {
             title: "Hunt Sales",
             description:
                 "Desenvolvi o site oficial da Hunt Sales, empresa especializada na construção de processos comerciais com IA.",
-            technologies: ["HTML", "CSS", "JAVASCRIPT"],
+            technologies: ["HTML", "CSS", "JavaScript"],
             image: huntImage,
             category: "Site",
             status: "Concluído",
@@ -114,18 +114,18 @@ export default function Projects() {
         {
             title: "Hunt Pilot",
             description:
-                "Desenvolvi a landing page do Hunt Pilot, um sistema com inteligência artificial que atua pelo WhatsApp.",
-            technologies: ["HTML", "CSS", "JAVASCRIPT"],
+                "Desenvolvi a landing page do Hunt Pilot, um sistema com inteligência artificial que atua via WhatsApp.",
+            technologies: ["HTML", "CSS", "JavaScript"],
             image: huntpilotImage,
             category: "Landing Page",
             status: "Concluído",
             demo: "https://huntsales.com.br/huntpilot/",
         },
         {
-            title: "App gestão almoxarifado militar",
+            title: "App Gestão Almoxarifado Militar",
             description:
                 "Aplicativo para gerenciar o almoxarifado militar, facilitando o controle de estoque e a logística de materiais.",
-            technologies: ["FIGMA", "TYPESCRIPT", "CSS", "HTML", "REACT", "FLUTTER", "PYTHON", "FIREBASE", "POSTGREE"],
+            technologies: ["Figma", "TypeScript", "CSS", "HTML", "React", "Flutter", "Python", "Firebase", "PostgreSQL"],
             image: almoxarifadoImage,
             category: "Mobile",
             status: "Andamento",

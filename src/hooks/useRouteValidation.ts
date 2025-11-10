@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 const validRoutes = [
   '/',
   '/home',
+  '/servicos',
   '/#about',
   '/#experience', 
   '/#projects',

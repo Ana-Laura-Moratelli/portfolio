@@ -10,17 +10,17 @@ export default function About() {
         <div className="about-content">
           <div className="about-text">
             <p>
-              Sou uma desenvolvedora frontend apaixonada por criar experiências digitais incríveis e funcionais. Com 20
-              anos, estou sempre em busca de novos desafios e oportunidades para crescer profissionalmente.
+              Sou Desenvolvedora Frontend, apaixonada por criar experiências digitais incríveis e funcionais. Tenho 20
+              anos e estou sempre em busca de novos desafios e oportunidades para crescer profissionalmente.
             </p>
             <p>
-              Minha jornada na tecnologia começou com eletrônica, onde desenvolvi uma boa base em lógica e resolução
+              Minha trajetória na tecnologia começou pela área de eletrônica, onde desenvolvi uma boa base em lógica e resolução
               de problemas. Essa experiência me proporcionou uma perspectiva única no desenvolvimento de software,
               combinando conhecimento técnico com criatividade.
             </p>
             <p>
-              Atualmente, foco no desenvolvimento frontend, criando interfaces intuitivas e responsivas que proporcionam
-              excelente experiência do usuário. Estou sempre aprendendo novas tecnologias e melhores práticas para
+              Atualmente, foco no desenvolvimento Frontend, criando interfaces intuitivas e responsivas que oferecem uma
+              excelente experiência ao usuário. Estou sempre aprendendo novas tecnologias e melhores práticas para
               entregar soluções de qualidade.
             </p>
           </div>
