@@ -28,7 +28,7 @@ export default function Portfolio() {
     ]
 
     return (
-        <section id="portfolio" className="projects">
+        <section id="portfolio" className="projects section-dark">
             <div className="container">
                 <div className="section-header">
                     <h2 className="section-title">Portfólio de Projetos</h2>
@@ -63,12 +63,6 @@ export default function Portfolio() {
                             </div>
                         </div>
                     ))}
-                </div>
-
-                <div style={{ textAlign: 'center', marginTop: '3rem' }}>
-                    <a href="/#projects" className="btn-secondary">
-                        Ver Todos os Projetos
-                    </a>
                 </div>
             </div>
         </section>

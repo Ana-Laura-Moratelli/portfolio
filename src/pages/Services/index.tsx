@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react"
-import Header from "../../components/Header"
+import ServicesHeader from "../../components/services/ServicesHeader"
 import Footer from "../../components/Footer"
 import ServicesHero from "../../components/services/ServicesHero"
 import ServicesOffered from "../../components/services/ServicesOffered"
+import PainPoints from "../../components/services/PainPoints"
 import WhyChooseMe from "../../components/services/WhyChooseMe"
 import Portfolio from "../../components/services/Portfolio"
 import Process from "../../components/services/Process"
-import Pricing from "../../components/services/Pricing"
-import Testimonials from "../../components/services/Testimonials"
+
 import CTASection from "../../components/services/CTASection"
 import "../Home/styles.css"
 
@@ -16,7 +16,7 @@ export default function Services() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["services-hero", "services-offered", "why-choose", "portfolio", "process", "pricing", "testimonials", "cta"]
+      const sections = ["services-hero", "services-offered", "pain-points", "why-choose", "portfolio", "process", "cta"]
       const scrollPosition = window.scrollY + 100
 
       for (const section of sections) {
@@ -63,7 +63,7 @@ export default function Services() {
           entry.target.classList.add('section-animate')
           
           const animatableElements = entry.target.querySelectorAll(
-            '.service-card, .benefit-card, .process-step, .pricing-card, .testimonial-card, .portfolio-item, .section-header'
+            '.service-card, .benefit-card, .process-step, .testimonial-card, .portfolio-item, .section-header'
           )
           
           animatableElements.forEach((element, index) => {
@@ -92,15 +92,14 @@ export default function Services() {
 
   return (
     <div className="portfolio">
-      <Header activeSection={activeSection} />
+      <ServicesHeader activeSection={activeSection} />
       <main>
         <ServicesHero />
         <ServicesOffered />
+        <PainPoints />
         <WhyChooseMe />
         <Portfolio />
         <Process />
-        <Pricing />
-        <Testimonials />
         <CTASection />
       </main>
       <Footer />

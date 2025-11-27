@@ -43,7 +43,7 @@ export default function WhyChooseMe() {
     ]
 
     return (
-        <section id="why-choose" className="skills">
+        <section id="why-choose" className="skills section-light">
             <div className="container">
                 <div className="section-header">
                     <h2 className="section-title">Por que me escolher?</h2>

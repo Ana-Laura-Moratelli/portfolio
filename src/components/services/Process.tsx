@@ -23,23 +23,11 @@ export default function Process() {
             title: "Desenvolvimento",
             description: "Codifico seu site utilizando as melhores práticas e tecnologias modernas do mercado.",
             icon: "💻"
-        },
-        {
-            number: "05",
-            title: "Testes",
-            description: "Testo em diversos dispositivos e navegadores para garantir que tudo funcione perfeitamente.",
-            icon: "🔍"
-        },
-        {
-            number: "06",
-            title: "Lançamento",
-            description: "Coloco seu site no ar e te ensino como gerenciar o conteúdo. Suporte pós-lançamento incluído!",
-            icon: "🚀"
         }
     ]
 
     return (
-        <section id="process" className="experience">
+        <section id="process" className="experience section-light">
             <div className="container">
                 <div className="section-header">
                     <h2 className="section-title">Como Funciona</h2>

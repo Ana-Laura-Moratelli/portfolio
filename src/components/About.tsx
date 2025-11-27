@@ -14,10 +14,7 @@ export default function About() {
               anos e estou sempre em busca de novos desafios e oportunidades para crescer profissionalmente.
             </p>
             <p>
-              Minha trajetória na tecnologia começou pela área de eletrônica, onde desenvolvi uma boa base em lógica e resolução
-              de problemas. Essa experiência me proporcionou uma perspectiva única no desenvolvimento de software,
-              combinando conhecimento técnico com criatividade.
-            </p>
+Minha trajetória na tecnologia começou pela eletrônica, que despertou meu interesse por lógica e resolução de problemas. Essa experiência me deu a base que hoje aplico no desenvolvimento de software, unindo técnica e criatividade no dia a dia.            </p>
             <p>
               Atualmente, foco no desenvolvimento Frontend, criando interfaces intuitivas e responsivas que oferecem uma
               excelente experiência ao usuário. Estou sempre aprendendo novas tecnologias e melhores práticas para

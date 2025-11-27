@@ -1,197 +1,43 @@
-import { useState } from "react"
-
 export default function CTASection() {
-    const [formData, setFormData] = useState({
-        name: "",
-        email: "",
-        phone: "",
-        service: "",
-        message: "",
-    })
-
-    const [isSubmitted, setIsSubmitted] = useState(false)
-    const [isSubmitting, setIsSubmitting] = useState(false)
-
-    const handleSubmit = async (e: React.FormEvent) => {
-        e.preventDefault()
-        setIsSubmitting(true)
-
-        try {
-            const form = new FormData()
-            form.append('name', formData.name)
-            form.append('email', formData.email)
-            form.append('phone', formData.phone)
-            form.append('service', formData.service)
-            form.append('message', formData.message)
-            form.append('_subject', `Novo orçamento de ${formData.name} - ${formData.service}`)
-            form.append('_captcha', 'false')
-            form.append('_template', 'table')
-
-            const response = await fetch('https://formsubmit.co/daf2b75e64fb846c63068f320fa8dc94', {
-                method: 'POST',
-                body: form
-            })
-
-            if (response.ok) {
-                setIsSubmitted(true)
-                setFormData({
-                    name: "",
-                    email: "",
-                    phone: "",
-                    service: "",
-                    message: "",
-                })
-            } else {
-                throw new Error('Erro ao enviar formulário')
-            }
-        } catch (error) {
-            console.error('Erro:', error)
-            alert('Erro ao enviar mensagem. Tente novamente.')
-        } finally {
-            setIsSubmitting(false)
-        }
-    }
-
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-        const { name, value } = e.target
-        setFormData({
-            ...formData,
-            [name]: value,
-        })
-    }
+    const whatsappNumber = "5511987654321" // Substitua pelo seu número real
+    const whatsappLink = `https://wa.me/${whatsappNumber}?text=Olá%20Ana%20Laura!%20Gostaria%20de%20solicitar%20um%20orçamento%20para%20um%20site.`
 
     return (
-        <section id="cta" className="contact">
+        <section id="cta" className="contact section-dark">
             <div className="container">
                 <div className="section-header">
                     <h2 className="section-title">Vamos Começar Seu Projeto?</h2>
-                    <p className="section-subtitle">Solicite um orçamento sem compromisso</p>
+                    <p className="section-subtitle">Entre em contato comigo direto pelo WhatsApp para discutirmos seu projeto!</p>
                 </div>
 
-                <div className="contact-form-container">
-                    {!isSubmitted ? (
-                        <form onSubmit={handleSubmit} className="contact-form">
-                            <div className="form-row">
-                                <div className="form-group">
-                                    <label htmlFor="name">Nome *</label>
-                                    <input
-                                        type="text"
-                                        id="name"
-                                        name="name"
-                                        value={formData.name}
-                                        onChange={handleChange}
-                                        required
-                                        placeholder="Seu nome"
-                                    />
-                                </div>
-                                <div className="form-group">
-                                    <label htmlFor="email">E-mail *</label>
-                                    <input
-                                        type="email"
-                                        id="email"
-                                        name="email"
-                                        value={formData.email}
-                                        onChange={handleChange}
-                                        required
-                                        placeholder="seu@email.com"
-                                    />
-                                </div>
-                            </div>
+                <div className="cta-content">
+            
+                    <div className="whatsapp-cta">
+                        <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="btn-whatsapp">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M8.886 7.17c.183.005.386.015.579.443c.128.285.343.81.519 1.238c.137.333.249.607.277.663c.064.128.104.275.02.448l-.028.058a1.4 1.4 0 0 1-.23.37l-.143.17c-.085.104-.17.206-.242.278c-.129.128-.262.266-.114.522s.668 1.098 1.435 1.777a6.6 6.6 0 0 0 1.903 1.2q.105.045.17.076c.257.128.41.108.558-.064c.149-.173.643-.749.817-1.005c.168-.256.34-.216.578-.128c.238.089 1.504.71 1.761.837l.143.07c.179.085.3.144.352.23c.064.109.064.62-.148 1.222c-.218.6-1.267 1.176-1.742 1.22l-.135.016c-.436.052-.988.12-2.956-.655c-2.426-.954-4.027-3.32-4.35-3.799l-.053-.076l-.006-.008c-.147-.197-1.048-1.402-1.048-2.646c0-1.19.587-1.81.854-2.092l.047-.05a.95.95 0 0 1 .687-.32c.173 0 .347 0 .495.005"/><path fill="currentColor" fill-rule="evenodd" d="M2.184 21.331a.4.4 0 0 0 .487.494l4.607-1.204a10 10 0 0 0 4.76 1.207h.004c5.486 0 9.958-4.446 9.958-9.912a9.83 9.83 0 0 0-2.914-7.011A9.92 9.92 0 0 0 12.042 2c-5.486 0-9.958 4.446-9.958 9.911c0 1.739.458 3.447 1.33 4.954zm2.677-4.068a1.5 1.5 0 0 0-.148-1.15a8.4 8.4 0 0 1-1.129-4.202c0-4.63 3.793-8.411 8.458-8.411c2.27 0 4.388.877 5.986 2.468a8.33 8.33 0 0 1 2.472 5.948c0 4.63-3.793 8.412-8.458 8.412h-.005a8.5 8.5 0 0 1-4.044-1.026a1.5 1.5 0 0 0-1.094-.132l-2.762.721z" clip-rule="evenodd"/></svg>
+                            Conversar no WhatsApp
+                        </a>
+                    </div>
 
-                            <div className="form-row">
-                                <div className="form-group">
-                                    <label htmlFor="phone">Telefone *</label>
-                                    <input
-                                        type="tel"
-                                        id="phone"
-                                        name="phone"
-                                        value={formData.phone}
-                                        onChange={handleChange}
-                                        required
-                                        placeholder="(00) 00000-0000"
-                                    />
-                                </div>
-                                <div className="form-group">
-                                    <label htmlFor="service">Serviço de Interesse *</label>
-                                    <select
-                                        id="service"
-                                        name="service"
-                                        value={formData.service}
-                                        onChange={handleChange}
-                                        required
-                                    >
-                                        <option value="">Selecione um serviço</option>
-                                        <option value="Landing Page">Landing Page</option>
-                                        <option value="Site Institucional">Site Institucional</option>
-                                        <option value="E-commerce">E-commerce</option>
-                                        <option value="Projeto Personalizado">Projeto Personalizado</option>
-                                    </select>
-                                </div>
+                    <div className="contact-alternatives">
+                        <p className="alternatives-title">Ou entre em contato por:</p>
+                        <div className="contact-info-grid">
+                               <a href="" target="_blank" rel="noopener noreferrer">
+                            <div className="contact-card">
+                                <div className="contact-icon">💼</div>
+                                <h3>Instagram</h3>
                             </div>
-
-                            <div className="form-group">
-                                <label htmlFor="message">Conte-me sobre seu projeto *</label>
-                                <textarea
-                                    id="message"
-                                    name="message"
-                                    value={formData.message}
-                                    onChange={handleChange}
-                                    required
-                                    rows={4}
-                                    placeholder="Descreva seu projeto, objetivos e prazos..."
-                                />
+                                </a>
+                                <a href="" target="_blank" rel="noopener noreferrer">
+                            <div className="contact-card">
+                                <div className="contact-icon">💼</div>
+                                <h3>LinkedIn</h3>
+                                
+                                   
+                               
                             </div>
-
-                            <button type="submit" className="form-submit" disabled={isSubmitting}>
-                                <span>{isSubmitting ? 'Enviando...' : 'Solicitar Orçamento'}</span>
-                                {!isSubmitting && (
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                        <path d="M5 12h14M12 5l7 7-7 7" />
-                                    </svg>
-                                )}
-                            </button>
-                        </form>
-                    ) : (
-                        <div className="success-message">
-                            <div className="success-icon">
-                                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-                                    <polyline points="22,4 12,14.01 9,11.01" />
-                                </svg>
-                            </div>
-                            <h3 className="success-title">Orçamento Solicitado com Sucesso! 🎉</h3>
-                            <p className="success-description">
-                                Obrigada pelo interesse! Analisarei seu projeto e entrarei em contato em até 24 horas com uma proposta personalizada.
-                            </p>
-                            <button
-                                onClick={() => setIsSubmitted(false)}
-                                className="btn-primary"
-                            >
-                                Solicitar novo orçamento
-                            </button>
+                             </a>
                         </div>
-                    )}
-                </div>
-
-                <div className="contact-info-grid">
-                    <div className="contact-card">
-                        <div className="contact-icon">📧</div>
-                        <h3>E-mail</h3>
-                        <p>ana.moratelli@fatec.sp.gov.br</p>
-                    </div>
-                    <div className="contact-card">
-                        <div className="contact-icon">💼</div>
-                        <h3>LinkedIn</h3>
-                        <a href="https://linkedin.com/in/anamoratelli" target="_blank" rel="noopener noreferrer">
-                            /anamoratelli
-                        </a>
-                    </div>
-                    <div className="contact-card">
-                        <div className="contact-icon">💻</div>
-                        <h3>GitHub</h3>
-                        <a href="https://github.com/Ana-Laura-Moratelli" target="_blank" rel="noopener noreferrer">
-                            /Ana-Laura-Moratelli
-                        </a>
                     </div>
                 </div>
             </div>
