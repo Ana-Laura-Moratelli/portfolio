@@ -1147,18 +1147,6 @@ p {
     display: none;
 }
 
-/* Global text alignment */
-body {
-    text-align: justify;
-}
-
-p {
-    text-align: justify;
-}
-
-.hero-description {
-    text-align: justify;
-}
 
 .section-subtitle {
     text-align: center !important;

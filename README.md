@@ -1,6 +1,6 @@
 <h1>:star2: Portfólio</h1>
 <div align="center">
-<div align="justify">
+<div align="left">
 Esse é meu portfólio que foi desenvolvido na aula de design digital com o principal objetivo de ter as minhas informações pessoais, acadêmicas e meus contatos.
 </div>
 
