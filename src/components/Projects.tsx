@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import nefroImage from '../assets/nefro.png'
 import serviceDeskImage from '../assets/service-desk.png'
 import fapgImage from '../assets/fapg.png'
@@ -12,6 +13,20 @@ import atlantisImage from '../assets/atlantis.png'
 import almoxarifadoImage from '../assets/almoxarifado.png'
 
 export default function Projects() {
+    const [activeTab, setActiveTab] = useState<'todos' | 'academicos' | 'pessoais'>('todos')
+    const [showCards, setShowCards] = useState(false)
+
+    useEffect(() => {
+        setShowCards(false)
+
+        // Reativa a classe de entrada ao trocar de aba para evitar cards invisíveis
+        const animationFrame = requestAnimationFrame(() => {
+            setShowCards(true)
+        })
+
+        return () => cancelAnimationFrame(animationFrame)
+    }, [activeTab])
+
     const projects = [
         {
             title: "Site Nefrologia Pediátrica",
@@ -21,6 +36,7 @@ export default function Projects() {
             image: nefroImage,
             category: "Site",
             status: "Concluído",
+            type: "academico",
             github: "https://github.com/Sync-FATEC/API-2023.2-1SEM",
         },
         {
@@ -31,6 +47,7 @@ export default function Projects() {
             image: serviceDeskImage,
             category: "Sistema",
             status: "Concluído",
+            type: "academico",
             github: "https://github.com/Sync-FATEC/API-2024.1-2SEM",
         },
         {
@@ -42,6 +59,7 @@ export default function Projects() {
             github: "https://github.com/Sync-FATEC/API-2024.2-3SEM",
             category: "Sistema",
             status: "Concluído",
+            type: "academico",
         },
         {
             title: "Sistema de Monitoramento Ambiental",
@@ -51,6 +69,7 @@ export default function Projects() {
             image: tecsusImage,
             category: "Sistema",
             status: "Concluído",
+            type: "academico",
             github: "https://github.com/Sync-FATEC/API-2025.1-4SEM"
         },
         {
@@ -61,6 +80,7 @@ export default function Projects() {
             image: unesImage,
             category: "Site",
             status: "Concluído",
+            type: "academico",
             github: "https://github.com/Ana-Laura-Moratelli/site-unes"
         },
         {
@@ -71,6 +91,7 @@ export default function Projects() {
             image: atlantisImage,
             category: "Sistema",
             status: "Concluído",
+            type: "academico",
             github: "https://github.com/Ana-Laura-Moratelli/atlantis",
         },
         {
@@ -81,6 +102,7 @@ export default function Projects() {
             image: tripwiseImage,
             category: "Mobile",
             status: "Concluído",
+            type: "academico",
             github: "https://github.com/Ana-Laura-Moratelli/tripwise",
         },
         {
@@ -91,6 +113,7 @@ export default function Projects() {
             image: petfinderImage,
             category: "Mobile",
             status: "Concluído",
+            type: "academico",
         },
         {
             title: "App Elogios",
@@ -100,6 +123,7 @@ export default function Projects() {
             image: appelogiosImage,
             category: "Mobile",
             status: "Concluído",
+            type: "pessoal",
         },
         {
             title: "Hunt Sales",
@@ -109,6 +133,7 @@ export default function Projects() {
             image: huntImage,
             category: "Site",
             status: "Concluído",
+            type: "pessoal",
             demo: "https://huntsales.com.br/",
         },
         {
@@ -119,6 +144,7 @@ export default function Projects() {
             image: huntpilotImage,
             category: "Landing Page",
             status: "Concluído",
+            type: "pessoal",
             demo: "https://huntsales.com.br/huntpilot/",
         },
         {
@@ -128,10 +154,18 @@ export default function Projects() {
             technologies: ["Figma", "TypeScript", "CSS", "HTML", "React", "Flutter", "Python", "Firebase", "PostgreSQL"],
             image: almoxarifadoImage,
             category: "Mobile",
-            status: "Andamento",
+            status: "Concluído",
+            type: "academico",
             github: "https://github.com/Sync-FATEC/API-2025.2-5SEM",
         },
     ]
+
+    const filteredProjects = projects.filter(project => {
+        if (activeTab === 'todos') return true
+        if (activeTab === 'academicos') return project.type === 'academico'
+        if (activeTab === 'pessoais') return project.type === 'pessoal'
+        return true
+    })
 
     return (
         <section id="projects" className="projects">
@@ -141,9 +175,34 @@ export default function Projects() {
                     <p className="section-subtitle">Alguns dos meus trabalhos mais recentes e significativos</p>
                 </div>
 
+                <div className="projects-tabs">
+                    <button 
+                        className={`tab-button ${activeTab === 'todos' ? 'active' : ''}`}
+                        onClick={() => setActiveTab('todos')}
+                    >
+                        Todos
+                    </button>
+                    <button 
+                        className={`tab-button ${activeTab === 'academicos' ? 'active' : ''}`}
+                        onClick={() => setActiveTab('academicos')}
+                    >
+                        Acadêmicos
+                    </button>
+                    <button 
+                        className={`tab-button ${activeTab === 'pessoais' ? 'active' : ''}`}
+                        onClick={() => setActiveTab('pessoais')}
+                    >
+                        Pessoais
+                    </button>
+                </div>
+
                 <div className="projects-grid">
-                    {projects.slice().reverse().map((project, index) => (
-                        <div key={index} className="project-card">
+                    {filteredProjects.slice().reverse().map((project, index) => (
+                        <div
+                            key={`${activeTab}-${project.title}`}
+                            className={`project-card ${showCards ? 'content-animate' : ''}`}
+                            style={{ transitionDelay: showCards ? `${index * 60}ms` : '0ms' }}
+                        >
                             <div className="project-image">
                                 <img src={project.image || "/placeholder.svg"} alt={project.title} />
                                 {(project.demo || project.github) && (

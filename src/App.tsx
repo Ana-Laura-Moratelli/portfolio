@@ -4,6 +4,7 @@ import Services from './pages/Services';
 import NotFound from './components/NotFound';
 import { ThemeProvider } from './context/ThemeContext';
 import { useRouteValidation } from './hooks';
+import { getNormalizedPathname } from './utils/pathname';
 
 function App() {
   // Força o scroll para o topo ao carregar/recarregar a página
@@ -27,7 +28,7 @@ function App() {
 
 function AppContent() {
   const { isValidRoute } = useRouteValidation();
-  const currentPath = window.location.pathname;
+  const currentPath = getNormalizedPathname(window.location.pathname);
 
   if (!isValidRoute) {
     return <NotFound />;

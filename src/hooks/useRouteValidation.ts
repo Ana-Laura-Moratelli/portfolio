@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { getNormalizedPathname } from '../utils/pathname'
 
 // Lista de rotas válidas
 const validRoutes = [
@@ -19,7 +20,7 @@ export function useRouteValidation() {
 
   useEffect(() => {
     const checkRoute = () => {
-      const pathname = window.location.pathname
+      const pathname = getNormalizedPathname(window.location.pathname)
       const hash = window.location.hash
       const fullPath = pathname + hash
       setCurrentPath(fullPath)
@@ -58,7 +59,7 @@ export function useRouteValidation() {
 
     // Observa mudanças no pathname (para SPAs)
     const observer = new MutationObserver(() => {
-      if (window.location.pathname !== currentPath.split('#')[0]) {
+      if (getNormalizedPathname(window.location.pathname) !== currentPath.split('#')[0]) {
         checkRoute()
       }
     })
