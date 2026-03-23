@@ -37,7 +37,7 @@ https://analauramoratelli.com.br/
   <pre><code>npm install</code></pre>
 
   <h3>Passo 5: Inicie a aplicação</h3>
-  <pre><code>npm start</code></pre>
+  <pre><code>npm run dev</code></pre>
  
 
 

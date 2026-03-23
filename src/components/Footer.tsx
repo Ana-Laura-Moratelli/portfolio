@@ -34,7 +34,7 @@ export default function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; 2025 Ana Laura Moratelli. Todos os direitos reservados.</p>
+          <p>&copy; 2026 Ana Laura Moratelli. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>

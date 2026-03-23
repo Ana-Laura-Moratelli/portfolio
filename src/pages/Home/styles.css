@@ -659,6 +659,7 @@ p {
 .project-image {
     position: relative;
     overflow: hidden;
+    height: 280px;
 }
 
 .project-image img {

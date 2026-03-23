@@ -6,9 +6,10 @@ import tecsusImage from '../assets/tecsus.png'
 import unesImage from '../assets/unes.png'
 import tripwiseImage from '../assets/tripwise.png'
 import petfinderImage from '../assets/petfinder.png'
-import huntImage from '../assets/hunt.png'
 import huntpilotImage from '../assets/huntpilot.png'
-import appelogiosImage from '../assets/appelogios.png'
+import reforteImage from '../assets/reforte.png'
+import castelloImage from '../assets/castello.png'
+import yakinikuImage from '../assets/yakiniku.png'
 import atlantisImage from '../assets/atlantis.png'
 import almoxarifadoImage from '../assets/almoxarifado.png'
 
@@ -37,7 +38,7 @@ export default function Projects() {
             category: "Site",
             status: "Concluído",
             type: "academico",
-            github: "https://github.com/Sync-FATEC/API-2023.2-1SEM",
+            github: "https://github.com/Ana-Laura-Moratelli/API-NEFRO",
         },
         {
             title: "Service Desk",
@@ -48,7 +49,7 @@ export default function Projects() {
             category: "Sistema",
             status: "Concluído",
             type: "academico",
-            github: "https://github.com/Sync-FATEC/API-2024.1-2SEM",
+            github: "https://github.com/Ana-Laura-Moratelli/API-DESK",
         },
         {
             title: "Portal da Transparência",
@@ -56,7 +57,7 @@ export default function Projects() {
                 "Este projeto consiste em desenvolver um portal da transparência para a Fundação FAPG. O objetivo foi entregar uma plataforma eficiente, com funcionalidades que permitem o gerenciamento completo dos projetos.",
             technologies: ["Figma", "HTML", "CSS", "React", "TypeScript", "Java", "Spring", "Python", "MySQL"],
             image: fapgImage,
-            github: "https://github.com/Sync-FATEC/API-2024.2-3SEM",
+            github: "https://github.com/Ana-Laura-Moratelli/API-2024.2-3SEM",
             category: "Sistema",
             status: "Concluído",
             type: "academico",
@@ -70,7 +71,7 @@ export default function Projects() {
             category: "Sistema",
             status: "Concluído",
             type: "academico",
-            github: "https://github.com/Sync-FATEC/API-2025.1-4SEM"
+            github: "https://github.com/Ana-Laura-Moratelli/API-2025.1-4SEM"
         },
         {
             title: "Unes",
@@ -114,38 +115,51 @@ export default function Projects() {
             category: "Mobile",
             status: "Concluído",
             type: "academico",
-        },
-        {
-            title: "App Elogios",
-            description:
-                "Aplicativo corporativo para reconhecimento e feedback entre colaboradores.",
-            technologies: ["JavaScript", "React Native", "Expo", "PostgreSQL"],
-            image: appelogiosImage,
-            category: "Mobile",
-            status: "Concluído",
-            type: "pessoal",
-        },
-        {
-            title: "Hunt Sales",
-            description:
-                "Desenvolvi o site oficial da Hunt Sales, empresa especializada na construção de processos comerciais com IA.",
-            technologies: ["HTML", "CSS", "JavaScript"],
-            image: huntImage,
-            category: "Site",
-            status: "Concluído",
-            type: "pessoal",
-            demo: "https://huntsales.com.br/",
+            demo: "https://www.behance.net/gallery/231794167/Pet-Finder"
         },
         {
             title: "Hunt Pilot",
             description:
                 "Desenvolvi a landing page do Hunt Pilot, um sistema com inteligência artificial que atua via WhatsApp.",
-            technologies: ["HTML", "CSS", "JavaScript"],
+            technologies: ["React", "TypeScript", "Tailwind CSS"],
             image: huntpilotImage,
             category: "Landing Page",
             status: "Concluído",
             type: "pessoal",
             demo: "https://huntsales.com.br/huntpilot/",
+        },
+        {
+            title: "Reforte Seguros",
+            description:
+                "Desenvolvi a landing page do Reforte Seguros, uma empresa de seguros e consórcios.",
+            technologies: ["React", "TypeScript", "Tailwind CSS"],
+            image: reforteImage,
+            category: "Landing Page",
+            status: "Concluído",
+            type: "pessoal",
+            demo: "https://www.reforteseguros.com.br/",
+        },
+        {
+            title: "Castello Locações",
+            description:
+                "Desenvolvi a landing page do Castello Locações, uma empresa especializada em locação audiovisual.",
+            technologies: ["React", "TypeScript", "Tailwind CSS"],
+            image: castelloImage,
+            category: "Landing Page",
+            status: "Concluído",
+            type: "pessoal",
+            demo: "https://www.castellolocacoes.com.br/",
+        },
+        {
+            title: "Yakiniku",
+            description:
+                "Desenvolvi a landing page do Yakiniku, um restaurante especializado em comida japonesa.",
+            technologies: ["React", "TypeScript", "Tailwind CSS"],
+            image: yakinikuImage,
+            category: "Landing Page",
+            status: "Concluído",
+            type: "pessoal",
+            demo: "https://yakinikufloripa.com.br/",
         },
         {
             title: "App Gestão Almoxarifado Militar",
@@ -176,19 +190,19 @@ export default function Projects() {
                 </div>
 
                 <div className="projects-tabs">
-                    <button 
+                    <button
                         className={`tab-button ${activeTab === 'todos' ? 'active' : ''}`}
                         onClick={() => setActiveTab('todos')}
                     >
                         Todos
                     </button>
-                    <button 
+                    <button
                         className={`tab-button ${activeTab === 'academicos' ? 'active' : ''}`}
                         onClick={() => setActiveTab('academicos')}
                     >
                         Acadêmicos
                     </button>
-                    <button 
+                    <button
                         className={`tab-button ${activeTab === 'pessoais' ? 'active' : ''}`}
                         onClick={() => setActiveTab('pessoais')}
                     >
