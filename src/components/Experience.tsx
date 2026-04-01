@@ -9,11 +9,11 @@ export default function Experience() {
       icon: "💻",
     },
     {
-      title: "Desenvolvedora Frontend",
+      title: "Desenvolvedora Front-end",
       company: "Coyô Software",
       period: "Agosto 2024 até o momento",
       description:
-        "Como Desenvolvedora Frontend, sou responsável por criar interfaces de usuário intuitivas e responsivas, assegurando uma experiência digital eficiente. Minhas responsabilidades incluem o desenvolvimento de aplicações web com foco em usabilidade e performance, a criação de layouts adaptáveis e acessíveis, e a implementação de melhores práticas de design UX, sempre com atenção aos detalhes e à jornada do usuário final.",
+        "Como Desenvolvedora Front-end, sou responsável por criar interfaces de usuário intuitivas e responsivas, assegurando uma experiência digital eficiente. Minhas responsabilidades incluem o desenvolvimento de aplicações web com foco em usabilidade e performance, a criação de layouts adaptáveis e acessíveis, e a implementação de melhores práticas de design UX, sempre com atenção aos detalhes e à jornada do usuário final.",
       icon: "🎨",
     },
     {
@@ -21,7 +21,7 @@ export default function Experience() {
       company: "Micro Assist Informática",
       period: "Janeiro 2024 até Agosto 2024",
       description:
-        "Como Suporte Técnico, desempenhei um papel fundamental na gestão de TI para empresas. Minhas responsabilidades incluíram a administração de servidores, implementação e manutenção de serviços de virtualização e gestão de serviços em nuvem. Como Analista de Projetos, realizei reuniões com clientes para entender suas necessidades e garantir que nossos produtos atendessem às expectativas, além de realizar a documentação dos projetos e dos novos clientes. Além disso, trabalhei no desenvolvimento de novos produtos, atuando como Desenvolvedora Frontend.",
+        "Como Suporte Técnico, desempenhei um papel fundamental na gestão de TI para empresas. Minhas responsabilidades incluíram a administração de servidores, implementação e manutenção de serviços de virtualização e gestão de serviços em nuvem. Como Analista de Projetos, realizei reuniões com clientes para entender suas necessidades e garantir que nossos produtos atendessem às expectativas, além de realizar a documentação dos projetos e dos novos clientes. Além disso, trabalhei no desenvolvimento de novos produtos, atuando como Desenvolvedora Front-end.",
       icon: "🔧",
     },
     {

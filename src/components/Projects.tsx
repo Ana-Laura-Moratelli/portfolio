@@ -12,6 +12,7 @@ import castelloImage from '../assets/castello.png'
 import yakinikuImage from '../assets/yakiniku.png'
 import atlantisImage from '../assets/atlantis.png'
 import almoxarifadoImage from '../assets/almoxarifado.png'
+import visionaImage from '../assets/visiona.png'
 
 export default function Projects() {
     const [activeTab, setActiveTab] = useState<'todos' | 'academicos' | 'pessoais'>('todos')
@@ -171,6 +172,17 @@ export default function Projects() {
             status: "Concluído",
             type: "academico",
             github: "https://github.com/Sync-FATEC/API-2025.2-5SEM",
+        },
+        {
+            title: "Plataforma web para análise de aspectos ASG",
+            description:
+                "Este projeto consiste no desenvolvimento de uma plataforma web para análise de aspectos Ambientais, Sociais e de Governança (ASG) de propriedades rurais do Estado de São Paulo. ",
+            technologies: ["Figma", "TypeScript", "Tailwind CSS", "Next JS", "Leaflet", "Python", "FastAPI", "PostgreSQL", "PostGIS", "Docker"],
+            image: visionaImage,
+            category: "Sistema",
+            status: "Andamento",
+            type: "academico",
+            github: "https://github.com/Ana-Laura-Moratelli/API-2026-6SEM",
         },
     ]
 
